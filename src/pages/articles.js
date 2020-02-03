@@ -14,7 +14,7 @@ function Articles(props) {
   const posts = data.allMdx.edges;
   let btnOne = "Header-link condensed";
   let btnTwo = "Header-link condensed";
-  let subs = 103;
+  let subs = 13;
   let content;
 
   if (toggle) {

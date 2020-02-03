@@ -11,7 +11,7 @@ function BlogTemplate(props) {
   const post = data.mdx;
   const siteTitle = data.site.siteMetadata.title;
   const { prev, next } = props.pageContext;
-  const subs = 103;
+  const subs = 13;
   let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
 
   return (
