@@ -2,8 +2,8 @@ import React from 'react';
 import useDarkMode from 'use-dark-mode';
 import { Link } from 'gatsby';
 
-import Sunshine from './sunshine';
-import Moonshine from './moonshine';
+import Sunshine from './Sunshine';
+import Moonshine from './Moonshine';
 import '../pages/index.css';
 
 function Header(props) {
