@@ -10,6 +10,7 @@ function Moonshine(props) {
       onKeyDown={handleClick}
       role="button"
       tabIndex={0}
+      aria-label="toggle light mode"
       >
       <FaMoon color="#F6AD55"/>
     </div>

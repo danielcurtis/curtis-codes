@@ -10,6 +10,7 @@ function Sunshine(props) {
       onKeyDown={handleClick}
       role="button"
       tabIndex={0}
+      aria-label="toggle light mode"
       >
       <FaSun color="#F6AD55" />
     </div>

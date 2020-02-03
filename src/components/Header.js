@@ -7,7 +7,7 @@ import Moonshine from './Moonshine';
 import '../pages/index.css';
 
 function Header(props) {
-  const darkMode = useDarkMode(true);
+  const darkMode = useDarkMode(false);
   const handleTheme = (theme) => {
     theme === "dark" ? darkMode.enable() : darkMode.disable();
   }
