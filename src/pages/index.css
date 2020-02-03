@@ -1,0 +1,179 @@
+/* Global Styles */
+
+.light-mode {
+  --clr: #1A202C;
+  --bg: white;
+  --link: blue;
+  --element-bg: #FAFAFA;
+  background: var(--bg);
+  color: var(--clr);
+}
+
+.dark-mode {
+  --clr: #E2E8F0;
+  --bg: black;
+  --link: rgb(27, 149, 224);
+  --element-bg: #090B0F;
+  background: var(--bg);
+  color: var(--clr);
+}
+
+.modeIcon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.condensed {
+  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed",
+    "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed",
+    "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold",
+    "HelveticaNeue", "Helvetica Neue", "TeXGyreHerosCnBold", "Helvetica",
+    "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+}
+
+.spacer {
+  margin-top: 80px;
+}
+
+::selection {
+  background: blue;
+  color: white;
+}
+
+.big {
+  font-size: calc(2vw + 10px);
+}
+
+.bg {
+  background: var(--element-bg);
+}
+
+body {
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  margin: auto;
+  max-width: 800px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6, .sans {
+  font-family: BlinkMacSystemFont,-apple-system,Roboto,Helvetica Neue,Helvetica,
+    Arial,sans-serif;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+}
+
+h2 {
+  margin-top: 70px;
+  margin-bottom: 0px;
+}
+
+p {
+  margin-top: 5px;
+  opacity: .9;
+}
+
+main {
+  margin: auto 10px
+}
+
+a {
+  text-decoration: none;
+  color: var(--link);
+}
+
+a:hover {
+  filter: brightness(1.2);
+}
+
+code, pre {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
+  overflow-x: scroll;
+  font-size: 16px;
+}
+
+pre {
+  padding: 10px;
+}
+
+blockquote {
+  border-left: solid 3px var(--clr);
+  margin: 0;
+  padding: 15px 30px;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
+  font-weight: bold;
+  background: var(--element-bg);
+}
+
+/* Component Styles */
+/* Stack.js */
+.Stack {
+  background: var(--element-bg);
+  max-width: 800px;
+  padding: 15px 20px;
+  margin-top: 20px;
+}
+
+.Stack-h3 {
+  padding: 0;
+  margin: 0;
+}
+
+.Stack-p {
+  margin: 3px 0;
+  padding: 0;
+}
+
+.Stack-feat {
+  background: var(--clr);
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 15px 10px 15px auto;
+  text-align: center;
+  color: var(--bg);
+  font-size: 14px;
+}
+
+/* Header.js */
+.Header-nav {
+  max-width: 800px;
+  margin: 20px auto 70px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header-link {
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+  border-color: var(--clr);
+  color: var(--clr);
+  background: var(--bg);
+  display: inline;
+  padding: 8px 16px;
+  font-size: calc(14px + .5vw);
+}
+
+.Header-link-a {
+  background: var(--clr);
+  color: var(--bg);
+  border-color: var(--clr);
+  padding: 8px 16px;
+  font-size: calc(14px + .5vw);
+  border-width: 2px;
+}
+
+/* Footer.js */
+.Footer {
+  margin: 70px auto 20px auto;
+  text-align: center;
+}

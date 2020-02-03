@@ -1,71 +1,72 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import React from 'react';
+import { Link, graphql } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import Img from "gatsby-image";
 
-import Bio from '../components/Bio'
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
-import { rhythm, scale } from '../utils/typography'
+import Layout from '../components/Layout';
+import SEO from '../components/seo';
 
-class BlogPostTemplate extends React.Component {
-  render() {
-    const post = this.props.data.mdx
-    const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
-    console.log(this.props.pageContext)
+function BlogTemplate(props) {
+  const { data } = props;
+  const post = data.mdx;
+  const siteTitle = data.site.siteMetadata.title;
+  const { prev, next } = props.pageContext;
+  const subs = 103;
+  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
 
-    return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-        <Bio />
-
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </Layout>
-    )
-  }
+  return (
+    <Layout location={props.location} title={siteTitle}>
+      <SEO title={post.frontmatter.title} />
+      <Img fluid={featuredImgFluid} />
+      <h1 className="big" style={{ marginTop: "20px" }}>
+        {post.frontmatter.title}
+      </h1>
+      <p style={{ display: `block` }} className="sans">
+        <strong>Daniel Curtis | {post.frontmatter.date}</strong>
+      </p>
+      <MDXRenderer>{post.body}</MDXRenderer>
+      <hr />
+      <p className="sans"><strong>
+        I enjoy building projects with code and writing about it. Join {subs} other
+        developers and
+        <a
+          href="https://tinyletter.com/curtiscodes"
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+          {` subscribe to my newsletter `}
+        </a>
+        if you do too!
+      </strong></p>
+      <ul
+        style={{
+          display: `flex`,
+          flexWrap: `wrap`,
+          justifyContent: `space-between`,
+          listStyle: `none`,
+          padding: 0,
+        }}
+      >
+        <li>
+          {prev && (
+            <Link to={`/articles${prev.fields.slug}`} rel="prev">
+              ← {prev.frontmatter.title}
+            </Link>
+          )}
+        </li>
+        <li>
+          {next && (
+            <Link to={`/articles${next.fields.slug}`} rel="next">
+              {next.frontmatter.title} →
+            </Link>
+          )}
+        </li>
+      </ul>
+    </Layout>
+  );
 }
 
-export default BlogPostTemplate
+export default BlogTemplate;
 
 export const pageQuery = graphql`
   query($slug: String!) {
@@ -77,12 +78,20 @@ export const pageQuery = graphql`
     }
     mdx(fields: { slug: { eq: $slug } }) {
       id
+      body
       excerpt(pruneLength: 160)
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        tags
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
-      body
     }
   }
 `

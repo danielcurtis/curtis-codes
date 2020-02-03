@@ -1,16 +1,17 @@
-const path = require(`path`)
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const path = require("path");
+const { createFilePath } = require(`gatsby-source-filesystem`);
+const _ = require("lodash");
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
-
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  return graphql(
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions;
+  const blgTemplate = path.resolve("src/templates/blog-post.js");
+  const tagTemplate = path.resolve("src/templates/tags.js");
+  const result = await graphql(
     `
       {
-        allMdx(
-          sort: { fields: [frontmatter___date], order: DESC }
-          limit: 1000
+        postsRemark: allMdx(
+          sort: { order: DESC, fields: [frontmatter___date] }
+          limit: 2000
         ) {
           edges {
             node {
@@ -20,36 +21,55 @@ exports.createPages = ({ graphql, actions }) => {
               }
               frontmatter {
                 title
+                tags
               }
               body
             }
           }
         }
+        tagsGroup: allMdx(limit: 2000) {
+          group(field: frontmatter___tags) {
+            fieldValue
+          }
+        }
       }
     `
-  ).then(result => {
-    if (result.errors) {
-      throw result.errors
-    }
+  );
 
-    // Create blog posts pages.
-    const posts = result.data.allMdx.edges
+  // GraphQL error checking
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
+  }
 
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
+  // Create blog posts pages.
+  const posts = result.data.postsRemark.edges;
+  const tags = result.data.tagsGroup.group;
 
-      createPage({
-        path: post.node.fields.slug,
-        component: blogPost,
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
-      })
-    })
-  })
+  posts.forEach((post, i) => {
+    const prev = i === posts.length - 1 ? null : posts[i + 1].node;
+    const next = i === 0 ? null : posts[i - 1].node;
+
+    createPage({
+      path: `/articles${post.node.fields.slug}`,
+      component: blgTemplate,
+      context: {
+        slug: post.node.fields.slug,
+        prev,
+        next,
+      },
+    });
+  });
+
+  tags.forEach(tag => {
+    createPage({
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
+      },
+    });
+  });
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
