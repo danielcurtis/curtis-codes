@@ -19,10 +19,10 @@ const Track = ({/*
     <div className="sans">
       <h2>Frontend</h2>
       <ul>
-        <Link to="/tags/react"><li>React</li></Link>
-        <Link to=""><li>Gatsby</li></Link>
-        <Link to=""><li>JavaScript</li></Link>
-        <Link to=""><li>HTML/CSS</li></Link>
+        <Link to="/articles/tags/react"><li>React</li></Link>
+        <li style={{ color: "darkred" }}>Gatsby</li>
+        <Link to="/articles/tags/javascript"><li>JavaScript</li></Link>
+        <li style={{ color: "darkred" }}>HTML/CSS</li>
         <li style={{ color: "darkred" }}>Next.js</li>
         <li style={{ color: "darkred" }}>Angular</li>
         <li style={{ color: "darkred" }}>TypeScript</li>
@@ -30,11 +30,11 @@ const Track = ({/*
 
       <h2>Backend</h2>
       <ul>
-        <Link to=""><li>C</li></Link>
-        <Link to=""><li>C++</li></Link>
-        <Link to=""><li>Python</li></Link>
-        <Link to=""><li>Node.js</li></Link>
-        <Link to=""><li>Express</li></Link>
+        <li style={{ color: "darkred" }}>C</li>
+        <li style={{ color: "darkred" }}>C++</li>
+        <li style={{ color: "darkred" }}>Python</li>
+        <li style={{ color: "darkred" }}>Node.js</li>
+        <li style={{ color: "darkred" }}>Express</li>
       </ul>
 
       <h2>DevOps</h2>
@@ -52,9 +52,9 @@ const Track = ({/*
 
       <h2>Databases</h2>
       <ul>
-        <Link to=""><li>SQL</li></Link>
-        <Link to=""><li>MongoDB</li></Link>
-        <Link to=""><li>Firebase</li></Link>
+        <li style={{ color: "darkred" }}>SQL</li>
+        <li style={{ color: "darkred" }}>MongoDB</li>
+        <li style={{ color: "darkred" }}>Firebase</li>
         <li style={{ color: "darkred" }}>Apollo/GraphQL</li>
       </ul>
 

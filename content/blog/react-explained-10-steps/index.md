@@ -1,7 +1,7 @@
 ---
 title: React Explained in 10 Steps
 date: '2020-01-01T22:12:03.284Z'
-tags: ["react"]
+tags: ["react", "javascript"]
 featuredImage: ./hero.jpg
 ---
 
@@ -329,7 +329,7 @@ function App() {
   };
 
   return (
-    <div className="App" style={styleObject}>
+    <div className="App bg" style={styleObject}>
       <p style={{ fontFamily: "sans-serif" }}>Hello, world!</p>
     </div>
   );
@@ -360,7 +360,7 @@ by feeding it data through props. Now you have an oak tree, spruce tree, and
 maple tree from the same reusable tree template of code.
 
 Show the trees to the user. Let the user decide the season, which also impacts
-the trees. See if you can duplicate the example below with only one function for 
+the trees. See if you can duplicate the example below with only one function for
 tree, leaf, and branch!
 
 
@@ -420,7 +420,7 @@ function App() {
   }
 
   return (
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div className="bg" style={{ display: "flex", justifyContent: "space-between" }}>
       <Tree type="oak" szn={season} />
       <Tree type="spruce" szn={season} />
       <Tree type="maple" szn={season} />

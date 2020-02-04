@@ -19,13 +19,13 @@ function Articles(props) {
 
   if (toggle) {
     content = <ArticleList posts={posts} />;
-    btnOne = "Header-link-a condensed";
-    btnTwo = "Header-link condensed";
+    btnOne = "Articles-btn-active condensed";
+    btnTwo = "Articles-btn condensed";
   }
   else {
     content = <Track data={data} />;
-    btnOne = "Header-link condensed";
-    btnTwo = "Header-link-a condensed";
+    btnOne = "Articles-btn condensed";
+    btnTwo = "Articles-btn-active condensed";
   }
 
   return (
@@ -38,20 +38,22 @@ function Articles(props) {
         “Be curious. Read widely. Try new things. What people call intelligence
         just boils down to curiosity.”<br />-Aaron Swartz
       </blockquote>
-      <p className="sans" style={{ margin: "30px auto" }}>
+      <p>
         Every week I explore a curiosity, typically a new programming language
         or paradigm. I've found the more I learn, the less I know. My learning
-        track offers a structured view of both. <strong>If we share curiosities,
-        join {subs} other developers and
+        track offers a structured view of both.
+      </p>
+      <p>
+        If we share curiosities, join {subs} other developers and
         <a
           href="https://tinyletter.com/curtiscodes"
           target="_blank"
           rel="noopener noreferrer"
           >
-          &nbsp;subscribe&nbsp;
-        </a>
-        to my "curtisy" newsletter!</strong>
+          &nbsp;subscribe to my "curtisy" newsletter
+        </a>!
       </p>
+
 
       <div className="Header-nav">
         <button
