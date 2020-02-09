@@ -12,16 +12,10 @@ function Index(props) {
   const siteTitle = data.site.siteMetadata.title;
   const stackData = [
     {
-      name: "Groopy",
-      link: "https://groopy.io",
-      desc: "Groopy (iOS, Android) allows friends to compete and grow with each other through private, structured social networks.",
-      feat: "React Native"
-    },
-    {
-      name: "Blocking Time",
-      link: "https://blokcingtime.com",
-      desc: "Blocking Time is a \"personal Jira\" progressive web application I built to track and understand my time, enabling me to balance work, life, and learning.",
-      feat: "Serverless"
+      name: "GroupedUp",
+      link: "https://grouped-up.webflow.io",
+      desc: "GroupedUp allows friends to compete and grow with each other online through structured micro-communities.",
+      feat: "Beta"
     },
     {
       name: "Full-stack Certification",
@@ -37,14 +31,14 @@ function Index(props) {
     },
     {
       name: "B.S. Computer Science & Cybersecurity",
-      link: "https://github.com/danielcurtis/cs-degree",
+      link: "#",
       desc: "Slated to complete my undergraduate degree in both Computer Science and Cybersecurity by August 2020.",
       feat: "Degree"
     },
     {
       name: "Deep Learning AI Specialization",
-      link: "https://github.com/danielcurtis/deep-learning",
-      desc: "Currently enrolled courses created and taught by Stanford's top-professors to _deepen_ understanding on deep learning through projects and coursework.",
+      link: "#",
+      desc: "Enrolled in courses created and taught by Stanford's top-professors to *deepen* my knowledge on deep learning through projects and coursework.",
       feat: "Specialization"
     },
   ];
@@ -52,7 +46,7 @@ function Index(props) {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO
-        title="Software Engineering Projects & Articles"
+        title="Software Engineering Projects & Guides"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
       <h2 className="big">
@@ -68,14 +62,13 @@ function Index(props) {
       <h2>Full-stack Development</h2>
       <Stack data={stackData[0]} />
       <Stack data={stackData[1]} />
-      <Stack data={stackData[2]} />
 
       <h2>Computer Science & Engineering</h2>
+      <Stack data={stackData[2]} />
       <Stack data={stackData[3]} />
-      <Stack data={stackData[4]} />
 
       <h2>Machine Learning</h2>
-      <Stack data={stackData[5]} />
+      <Stack data={stackData[4]} />
 
       <h2>About Me & Quicklinks</h2>
       <p className="sans">
@@ -85,9 +78,9 @@ function Index(props) {
       </p>
       <p className="sans">
         Over the last year, I started pushing myself out of my coding comfort
-        zone. Every week I apply a new technology to a project and document
-        what I learn. My goal with this site is to leave a ladder behind for
-        others who share a similar passion for project-based learning.
+        zone. I try to learn something new every week through a project. My goal
+        with this site is to leave a ladder behind for others who share a similar
+        passion for project-based learning.
       </p>
       {/*<blockquote>
         I highly recommend Daniel. He has helped me with my growing to become a
@@ -100,36 +93,38 @@ function Index(props) {
         Feel free to reach out on any of the listed platforms. I'll be open to
         new professional opportunities in August 2020.
       </p>
-      <a
-        href="https://github.com/danielcurtis"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="sans"
-        >
-        <FaGithub style={{ height: "16px" }} /> GitHub
-      </a><br />
-      <a
-        href="mailto:contactdcurtis@gmail.com"
-        className="sans"
-        >
-        <FaRegEnvelope style={{ height: "16px" }} /> Email
-      </a><br />
-      <a
-        href="https://twitter.com/curtiscodes"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="sans"
-        >
-        <FaTwitter style={{ height: "16px" }} /> Twitter
+      <div className="Index-social">
+        <a
+          href="https://github.com/danielcurtis"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sans"
+          >
+          <FaGithub style={{ height: "16px" }} /> GitHub
         </a><br />
-      <a
-        href="https://tinyletter.com/curtiscodes"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="sans"
-        >
-        <FaRegNewspaper style={{ height: "16px" }} /> Curtisy Newsletter
-      </a><br />
+        <a
+          href="mailto:contactdcurtis@gmail.com"
+          className="sans"
+          >
+          <FaRegEnvelope style={{ height: "16px" }} /> Email
+        </a><br />
+        <a
+          href="https://twitter.com/curtiscodes"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sans"
+          >
+          <FaTwitter style={{ height: "16px" }} /> Twitter
+          </a><br />
+        <a
+          href="https://tinyletter.com/curtiscodes"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="sans"
+          >
+          <FaRegNewspaper style={{ height: "16px" }} /> Curtisy Newsletter
+        </a><br />
+      </div>
 
     </Layout>
   );

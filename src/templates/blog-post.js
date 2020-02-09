@@ -49,14 +49,14 @@ function BlogTemplate(props) {
       >
         <li>
           {prev && (
-            <Link to={`/articles${prev.fields.slug}`} rel="prev">
+            <Link to={`/guides${prev.fields.slug}`} rel="prev">
               ← {prev.frontmatter.title}
             </Link>
           )}
         </li>
         <li>
           {next && (
-            <Link to={`/articles${next.fields.slug}`} rel="next">
+            <Link to={`/guides${next.fields.slug}`} rel="next">
               {next.frontmatter.title} →
             </Link>
           )}

@@ -7,7 +7,7 @@ import ArticleList from '../components/ArticleList';
 import Track from '../components/Track';
 import './index.css';
 
-function Articles(props) {
+function Guides(props) {
   const [toggle, setToggle] = useState(true);
   const { data } = props;
   const siteTitle = data.site.siteMetadata.title;
@@ -31,7 +31,7 @@ function Articles(props) {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO
-        title="Articles"
+        title="Guides"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
       <blockquote>
@@ -42,6 +42,11 @@ function Articles(props) {
         Every week I explore a curiosity, typically a new programming language
         or paradigm. I've found the more I learn, the less I know. My learning
         track offers a structured view of both.
+      </p>
+      <p>
+        Computer Science is overcomplicated. I create <del>brief but
+        comprehensive</del> <strong>concise</strong> guides. None of my guides
+        take longer than 10 minutes to read or watch.
       </p>
       <p>
         If we share curiosities, join {subs} other developers and
@@ -60,7 +65,7 @@ function Articles(props) {
           className={btnOne}
           onClick={() => setToggle(!toggle)}
           >
-          Articles by Date
+          Guides by Date
         </button>
         <button
           className={btnTwo}
@@ -76,7 +81,7 @@ function Articles(props) {
   );
 }
 
-export default Articles;
+export default Guides;
 
 export const pageQuery = graphql`
   query {

@@ -11,7 +11,7 @@ function ArticleList(props) {
       return (
         <div key={node.fields.slug} className="Stack">
           <h3 className="Stack-h3 condensed">
-            <Link to={`/articles/${node.fields.slug}`}>
+            <Link to={`/guides/${node.fields.slug}`}>
               {title}
             </Link>
           </h3>

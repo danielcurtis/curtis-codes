@@ -32,9 +32,9 @@ function Header(props) {
           partiallyActive={true}
           className="Header-link condensed"
           activeClassName="Header-link-a condensed"
-          to="/articles/"
+          to="/guides/"
           >
-          {`Articles`}
+          {`Guides`}
         </Link>
         <div className="modeIcon">{modeIcon}</div>
       </nav>

@@ -19,9 +19,9 @@ const Track = ({/*
     <div className="sans">
       <h2>Frontend</h2>
       <ul>
-        <Link to="/articles/tags/react"><li>React</li></Link>
+        <Link to="/guides/tags/react"><li>React</li></Link>
         <li style={{ color: "darkred" }}>Gatsby</li>
-        <Link to="/articles/tags/javascript"><li>JavaScript</li></Link>
+        <Link to="/guides/tags/javascript"><li>JavaScript</li></Link>
         <li style={{ color: "darkred" }}>HTML/CSS</li>
         <li style={{ color: "darkred" }}>Next.js</li>
         <li style={{ color: "darkred" }}>Angular</li>
