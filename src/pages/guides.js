@@ -35,28 +35,24 @@ function Guides(props) {
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
       <blockquote>
-        “Be curious. Read widely. Try new things. What people call intelligence
-        just boils down to curiosity.”<br />-Aaron Swartz
+        “If you can't explain it simply, you don't understand it well enough.”
+        <br />-Albert Einstien
       </blockquote>
       <p>
-        Every week I explore a curiosity, typically a new programming language
-        or paradigm. I've found the more I learn, the less I know. My learning
-        track offers a structured view of both.
+        Computer Science is often overcomplicated. I've found that the more I
+        learn, the less I know. So, I started creating <del>brief but
+        comprehensive</del> <strong>concise</strong> guides on the languages and
+        paradigms I learn.
       </p>
       <p>
-        Computer Science is overcomplicated. I create <del>brief but
-        comprehensive</del> <strong>concise</strong> guides. None of my guides
-        take longer than 10 minutes to read or watch.
-      </p>
-      <p>
-        If we share curiosities, join {subs} other developers and
+        Join {subs} other developers and
         <a
           href="https://tinyletter.com/curtiscodes"
           target="_blank"
           rel="noopener noreferrer"
           >
-          &nbsp;subscribe to my "curtisy" newsletter
-        </a>!
+          &nbsp;subscribe to my bi-weekly newsletter
+        </a> for updates in the project-based learning community.
       </p>
 
 

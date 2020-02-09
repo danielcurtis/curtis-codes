@@ -1,22 +1,18 @@
 import React from "react"
 import PropTypes from "prop-types"
-
-// Utilities
 import kebabCase from "lodash/kebabCase"
 
-// Components
 import { Link, graphql } from "gatsby"
 
-const Track = ({/*
-  data: {
-    allMdx: { group },
-    site: {
-      siteMetadata: { title },
-    },
-  },
-*/}) => (
-  <div>
-    <div className="sans">
+function Track() {
+  return (
+    <div>
+      <p>
+        I was inspired by Tania Rascia, an excellent OSS programmer and author,
+        to learn in public. Until I publish a guide on a topic, I leave it
+        marked red (to be learned). My focus is C, Node.js, and React with
+        occasional explorations of other curiosities.
+      </p>
       <h2>Frontend</h2>
       <ul>
         <Link to="/guides/tags/react"><li>React</li></Link>
@@ -100,25 +96,7 @@ const Track = ({/*
       </ul>
       */}
     </div>
-  </div>
-);
-/*
-Track.propTypes = {
-  data: PropTypes.shape({
-    allMdx: PropTypes.shape({
-      group: PropTypes.arrayOf(
-        PropTypes.shape({
-          fieldValue: PropTypes.string.isRequired,
-          totalCount: PropTypes.number.isRequired,
-        }).isRequired
-      ),
-    }),
-    site: PropTypes.shape({
-      siteMetadata: PropTypes.shape({
-        title: PropTypes.string.isRequired,
-      }),
-    }),
-  }),
-}*/
+  );
+}
 
 export default Track;

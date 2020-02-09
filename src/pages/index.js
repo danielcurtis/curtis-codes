@@ -66,8 +66,6 @@ function Index(props) {
       <h2>Computer Science & Engineering</h2>
       <Stack data={stackData[2]} />
       <Stack data={stackData[3]} />
-
-      <h2>Machine Learning</h2>
       <Stack data={stackData[4]} />
 
       <h2>About Me & Quicklinks</h2>
@@ -109,7 +107,7 @@ function Index(props) {
           <FaRegEnvelope style={{ height: "16px" }} /> Email
         </a><br />
         <a
-          href="https://twitter.com/curtiscodes"
+          href="https://twitter.com/curtiscodes_"
           target="_blank"
           rel="noopener noreferrer"
           className="sans"

@@ -5,17 +5,14 @@ tags: ["react", "javascript"]
 featuredImage: ./hero.jpg
 ---
 
-I build all of my web-based projects in React, unless I'm learning something
-new. React is often overcomplicated, so this is my attempt to demystify the
-framework in ten steps.
+React is now my choice for frontend development, but I found it hard to learn.
+This is my attempt to demystify the library in ten steps.
 
 ## 1. What is React?
-Websites display information for users to read and interact with. React makes it
-easy to change what information is displayed.
-
-Instead of targeting specific elements in the DOM (Document Object Model) with
-jQuery or plain JavaScript to make changes, React automatically updates the UI
-as demonstrated below:
+Websites display data. Users read and interact with the website, changing what
+data is displayed. Programming this change in data can be done many different
+ways. React is one of the simplest ways because it automatically handles updates
+for you:
 
 ```js react-live
 function Component() {
@@ -36,29 +33,32 @@ render(<Component />);
 ```
 
 ## 2. Thinking in React
-React redefines web page architecture. Instead of a document of information,
-React renders collections of building blocks or components of information.
+Component-based libraries such as Angular or React redefine web page
+architecture. Traditionally, websites were "pages" of data. In React, web pages
+are collections of components. Each component is a function.
 
-[Blocks-UI](https://blocks-ui.com/demo) fantastically illustrates this idea with
-a drag and drop website builder.
+Instead of a HTML document of `<header>`, `<main>`, and `<footer>` elements,
+React would have `Header()`, `Main()`, and `Footer()` functions. And these
+functions would be split down even further into `Icon()`, `Navigation()`, and
+`Links()`.
+
+[Blocks-UI](https://blocks-ui.com/demo) illustrates this idea with a drag and
+drop website builder.
 [Thinking in React](https://reactjs.org/docs/thinking-in-react.html) also covers
 this idea extensively.
-
-React categorizes information into separate components, similar to how HTML has
-`<header>`, `<main>`, and `<footer>` elements. React takes it further though.
-Header would be a component with an Icon component, Navigation component, and
-Links component.
 
 ![Stripes website broken down in components](./website.png)
 
 ## 3. Functions, Classes, and Components
-Functions, classes, and components are all the same thing in React. Every
-component in React should be a class or function. Classes in JavaScript are just
-a particular type of function. Every component in React returns a snippet of
-HTML called "JSX."
+Functions, classes, and components are synonymous in React. Every component in
+React should be a class or function. _Classes in JavaScript are special
+functions._
+
+Because React pages are made out of components, the components must contain HTML.
+Every React function returns HTML code called "JSX."
 
 In plain JavaScript and HTML, the languages are separated. In React, components
-encapsulate their JavaScript, HTML, and data making for cleaner code.
+encapsulate their JavaScript, HTML, and data.
 
 ```js react-live
 function App() {
@@ -93,18 +93,19 @@ function Title() {
 ```
 
 ## 4. The Power of Components
-Components are highly reusable. Our title component can be used across
-our entire website. Instead of creating ten HTML titles and configuring our
-plain JavaScript function to work with all ten titles, React only needs one.
+Components are reusable. Our title component can be used across our entire
+website. Instead of creating HTML `<h1>titles</h1>` on every page, React only
+needs one `Title()` component.
 
-Any component can be called within other "parent" components. For example, if
-you have a title component and paragraph component, you can create a parent
-component to hold both of them. Breaking down every item into a component and
-combining them to create a webpage is best illustrated with a tree model:
+Components can be called within other "parent" components. For example, if
+you have title and paragraph components, you can create a parent component to
+hold both of them. Components are called with the following syntax: `<Title />`.
 
-* Body Component
-  * Title Component
-  * Paragraph Component
+Trees illustrate parent and child components well.
+
+* Body Component (Parent)
+  * Title Component (Child)
+  * Paragraph Component (Child)
 
 ```js react-live
 function App() {
@@ -122,18 +123,18 @@ render(<App />);
 ```js
 import React from "react";
 
-function Title() {
+function Title() { // child component
   return <h1>My Title</h1>;
 }
 
-function Paragraph() {
+function Paragraph() { // child component
   return <p>Wow, much paragraph. Very placeholder</p>;
 }
 
-function Body() { // custom parent component
+function Body() { // parent component
   return (
     <div>
-      <Title /> // how to call components in React <Component />
+      <Title /> // how components are called
       <Paragraph />
     </div> // because Body is one component, Title and Paragraph must be wrapped in a div
   );
@@ -141,18 +142,23 @@ function Body() { // custom parent component
 ```
 
 ## 5. Component Properties
-If we were to reuse the body component, the text would be the same every time.
-Every component can have unique properties passed into the first parameter. The
-properties are passed down from a parent component as an object called `props`.
-This makes every component completely reusable.
+Reusing one component means reusing the same data. Therefore, every
+component can have unique properties passed in to the first parameter of the
+component function. Properties are passed down from a parent component as an
+object called `props`.
+
+Props allow us to dynamically change the data of every component, making the
+component highly reusable. Props can be any data type, even other functions.
 
 ```js react-live
 function App() {
+  let date = new Date();
+
   return (
     <div className="bg">
       <h3>Chapters</h3>
-      <h4>Campfire Songs</h4>
-      <h4>Ghost Stories</h4>
+      <h4>Campfire Songs {date.getFullYear()}</h4>
+      <h4>Ghost Stories {date.getFullYear()}</h4>
     </div>
   );
 }
@@ -164,29 +170,30 @@ render(<App />);
 import React from "react";
 
 function Title(props) {
-  console.log(props.link);
-  return <h4>{props.title}</h4>;
+  return <h4>{`${props.title} ${props.date}`}</h4>;
 }
 
 function IndexTitles() {
+  let date = new Date();
+
   return (
     <div>
       <h3>Chapters:</h3>
-      <Title title="Campfire Songs" /> // prop names can be anything
-      <Title title="Ghost Stories" link={["google.com", "abc.com"]} /> // anything can be passed as props
+      <Title title="Campfire Songs" date={date.getFullYear()} />
+      <Title title="Ghost Stories" date={date.getFullYear()} />
     </div>
   );
 }
 ```
 
-## 6. Data Manipulation
-React shines when you need to display different data depending on user
-interactions. React uses the idea of "state" to make it easy. Think of state as
-a timeline that shows what "state" a user is in. Every component function can
-create a "state" for that function by using a special React function called
-`useState`. The `useState` function is called a "Hook" in React.
+## 6. Data Manipulation with Hooks
+React shines when you need to display data dependent on user interactions. React
+uses the idea of "state" to make it easy. State is a web page timeline that
+tracks what "state" the web page is in. Every component can create state by
+using a special React function called `useState`. The `useState` function is
+called a "Hook" in React.
 
-Here's our function's timeline:
+Here's our web page timeline:
 
 1. User accesses webpage: state == 0 (nothing's happened)
 2. User clicks button: state == 1 (button clicked once)
@@ -211,8 +218,8 @@ function Component() {
 render(<Component />);
 ```
 
-This timeline is straightforward to code in React. The function can also
-conditionally render information depending on what state the function is in.
+This timeline is straightforward to code in React. Hooks are declared using the
+following syntax: `const [name, setName] = useState("Initial Value");`
 
 ```js
 import React, { useState } from "react";
@@ -239,18 +246,20 @@ information inside of components.
 
 For example, Facebook renders a landing page component if you're not logged in.
 On the contrary, Facebook renders a feed component if you are logged in. Being
-logged in is the "state" that the web page is in. Conditionally rendering
-components and data depending on a web pages state is what makes React magical.
+logged in is the "state" that the web page is in.
+
+Conditionally rendering components and data depending on a web pages state is
+what makes React magical.
 
 ```js
 import React, { useState } from "react";
 
 function LandingPage() {
-  return <div>/* great Landing page HTML */</div>;
+  return <div>Wow, a landing page!</div>;
 }
 
 function Feed() {
-  return <div>/* great news feed HTML */</div>;
+  return <div>Cool, a news feed!</div>;
 }
 
 function Homepage() {
@@ -264,9 +273,9 @@ function Homepage() {
 ```
 
 ## 8. Asynchronous Hooks
-React has two hooks for controlling state. `useState` is the most common.
-`useEffect` is powerful for fetching data from an outside source like an API.
-`useEffect` is a callback function that can asynchronously update state.
+React has two hooks for controlling state. `useState()` is the most common.
+`useEffect()` is powerful for fetching data from an outside source like an API.
+`useEffect()` is a callback function that can asynchronously update state.
 
 For example, let's say you have a component that renders "Hello, username" where
 username is data stored in an external database.
@@ -293,27 +302,27 @@ render(<App />);
 import React, { useState, useEffect } from "react";
 
 function WelcomeMessage(props) {
-  const [username, setUsername] = useState({}); // initial is an empty object
+  const [username, setUsername] = useState({}); // initial state is an empty object
 
   useEffect(() => {
     fetch("https://MyDatabase.com/" + props.key) // fetch username based on API key passed in via prop
       .then(response => response.json())
       .then(result => setUsername(result));
-  }, [props.key]);
+  }, [props.key]); // useEffect dependencies, i.e. the API key
 
   return <h1>`Hello, ${username}`</h1>;
 }
 
 ```
 
-If you don't completely understand don't worry! Asynchronous programming is a
-tough concept. It'll become clear with practice.
+If you don't completely understand, don't worry! Asynchronous programming is a
+tough concept. It'll become clear with practice. The important takeaway is that
+useEffect() runs every time our component runs.
 
 ## 9. Styling Components
-React is a UI library. Of course, styling is a big deal. And probably the most
-controversial topic. React allows inline styling or CSS classes, just
-like HTML elements. Inline styling uses object notation, and classes use external
-CSS stylesheets.
+React is a UI library. Of course, styling is a big deal. React allows inline
+styling or CSS classes, just like HTML elements. Inline styling uses object
+notation, and classes use external CSS stylesheets.
 
 It's best practice to avoid global styles and make styles specific to
 components. Just like it's best practice to avoid global variables and make
@@ -353,15 +362,19 @@ function App() {
 
 ```
 
-## 10. An analogy to put it all together
-Think of webpages as individual components instead of a pages of information.
-These components come together as a reusable tree. You can make the tree unique
-by feeding it data through props. Now you have an oak tree, spruce tree, and
-maple tree from the same reusable tree template of code.
+There are also many styling modules I don't cover, such as [styled components](https://styled-components.com/docs/basics).
+
+## 10. Putting it all together
+Web pages are a combination of individual components instead of pages of HTML.
+These components come together as a tree of components. You can make the tree
+unique by feeding it data through props or fetching data with useEffect(). Now
+you have an oak tree, spruce tree, and maple tree from one single tree component.
 
 Show the trees to the user. Let the user decide the season, which also impacts
-the trees. See if you can duplicate the example below with only one function for
-tree, leaf, and branch!
+the "state" of the trees.
+
+See if you can duplicate the example below with only three functions: tree,
+leaf, and branch!
 
 
 ```js react-live
