@@ -13,7 +13,7 @@ const Tags = ({ pageContext, data }) => {
   } tagged with "${tag}"`
 
   return (
-    <Layout location={`/guides${tagHeader}`} title={tagHeader}>
+    <Layout location={tagHeader} title={tagHeader}>
       <div>
         <h1>{tagHeader}</h1>
         <ul>
@@ -22,7 +22,7 @@ const Tags = ({ pageContext, data }) => {
             const { title } = node.frontmatter
             return (
               <li key={slug}>
-                <Link to={`/guides${slug}`}>{title}</Link>
+                <Link to={slug}>{title}</Link>
               </li>
             )
           })}

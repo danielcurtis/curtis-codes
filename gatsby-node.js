@@ -51,7 +51,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const next = i === 0 ? null : posts[i - 1].node;
 
     createPage({
-      path: `/guides${post.node.fields.slug}`,
+      path: post.node.fields.slug,
       component: blgTemplate,
       context: {
         slug: post.node.fields.slug,
@@ -63,7 +63,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   tags.forEach(tag => {
     createPage({
-      path: `/guides/tags/${_.kebabCase(tag.fieldValue)}/`,
+      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,

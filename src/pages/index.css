@@ -42,10 +42,6 @@
   color: white;
 }
 
-.big {
-  font-size: calc(1.7vw + 20px);
-}
-
 .bg {
   background: rgb(40, 42, 54);
   color: white;
@@ -56,23 +52,27 @@
 
 body {
   font-size: 18px;
+  scroll-behavior: smooth;
   margin: auto;
   max-width: 800px;
-  font-family: BlinkMacSystemFont,-apple-system,Roboto,Helvetica Neue,Helvetica,
-    Arial,sans-serif;
   line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 h1 {
   margin: 0;
   padding: 0;
-  font-size: 24px;
+  font-size: 50px;
 }
 
 h2 {
-  margin-top: 70px;
+  margin-top: 10vh;
   margin-bottom: 15px;
-  font-size: 1.5rem;
+  font-size: 35px;
+}
+
+.h2-margin {
+  margin-top: 30px;
 }
 
 p {
@@ -81,7 +81,7 @@ p {
 }
 
 main {
-  margin: auto 10px
+  margin: auto 10px;
 }
 
 a {
@@ -115,6 +115,41 @@ blockquote {
   background: var(--element-bg);
 }
 
+ol {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+ol > li {
+  position: relative;
+  margin: 0;
+  padding-bottom: .5em;
+  padding-left: 20px;
+}
+
+ol > li:before {
+  content: '';
+  background-color: black;
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  left: 5px;
+  width: 2px;
+}
+
+ol > li:after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  left: 1px;
+  top: 8px;
+  height: 6px;
+  width: 6px;
+  border-radius: 100%;
+  border: 2px solid black;
+}
+
 /* Component Styles */
 /* Stack.js */
 .Stack {
@@ -123,6 +158,8 @@ blockquote {
   padding: 15px 20px;
   margin-top: 20px;
   border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .Stack-h3 {
@@ -137,12 +174,12 @@ blockquote {
 
 .Stack-feat {
   background: var(--clr);
-  padding: 4px 8px;
+  padding: 5px 8px;
   border-radius: 4px;
-  margin: 15px 10px 15px auto;
   text-align: center;
   color: var(--bg);
   font-size: 14px;
+  margin-left: 5px;
 }
 
 /* Header.js */
@@ -164,6 +201,7 @@ blockquote {
   display: inline;
   padding: 8px 16px;
   font-size: calc(14px + .5vw);
+  box-shadow: 3px 3px 0px var(--clr);
 }
 
 .Header-link-a {
@@ -173,11 +211,12 @@ blockquote {
   padding: 8px 16px;
   font-size: calc(14px + .5vw);
   border-width: 2px;
+  box-shadow: 3px 3px 0px var(--clr);
 }
 
 /* Footer.js */
 .Footer {
-  margin: 70px auto 20px auto;
+  margin: 10vh auto 20px auto;
   text-align: center;
 }
 
@@ -210,8 +249,28 @@ blockquote {
   justify-content: space-around;
 }
 
+.Index-social > a:nth-of-type(2){
+  color: #CF4232;
+}
+
+.Index-social > a:nth-of-type(3){
+  color: #EB7F23;
+}
+
+.Index-social > a:nth-of-type(4){
+  color: #FAC023;
+}
+
+.Index-social > a:nth-of-type(5){
+  color: #068675;
+}
+
+.Index-social > a:nth-of-type(6){
+  color: #6B202E;
+}
+
 @media only screen and (max-width: 600px) {
-  .Index-social {
+  .Index-social, .Stack {
     display: block;
   }
 }

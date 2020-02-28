@@ -17,8 +17,7 @@ function BlogTemplate(props) {
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title={post.frontmatter.title} />
-      <Img fluid={featuredImgFluid} />
-      <h1 className="big" style={{ marginTop: "20px" }}>
+      <h1 style={{ marginTop: "20px" }}>
         {post.frontmatter.title}
       </h1>
       <p style={{ display: `block` }} className="sans">
@@ -28,13 +27,13 @@ function BlogTemplate(props) {
       <hr />
       <p className="sans"><strong>
         I enjoy building projects with code and writing about it. Join {subs} other
-        developers and
+        project-based learners & engineers and
         <a
           href="https://tinyletter.com/curtiscodes"
           target="_blank"
           rel="noopener noreferrer"
           >
-          {` subscribe to my newsletter `}
+          {` subscribe to my side pr0ject `}
         </a>
         if you do too!
       </strong></p>
@@ -49,14 +48,14 @@ function BlogTemplate(props) {
       >
         <li>
           {prev && (
-            <Link to={`/guides${prev.fields.slug}`} rel="prev">
+            <Link to={prev.fields.slug} rel="prev">
               ← {prev.frontmatter.title}
             </Link>
           )}
         </li>
         <li>
           {next && (
-            <Link to={`/guides${next.fields.slug}`} rel="next">
+            <Link to={next.fields.slug} rel="next">
               {next.frontmatter.title} →
             </Link>
           )}

@@ -10,10 +10,10 @@ function Track() {
       <p>
         I was inspired by Tania Rascia, an excellent OSS programmer and author,
         to learn in public. Until I publish a guide on a topic, I leave it
-        marked red (to be learned). My focus is C, Node.js, and React with
+        marked red (to be learned). My focus is C, C++, Node.js, and React with
         occasional explorations of other curiosities.
       </p>
-      <h2>Frontend</h2>
+      <h3>Frontend</h3>
       <ul>
         <Link to="/guides/tags/react"><li>React</li></Link>
         <li style={{ color: "darkred" }}>Gatsby</li>
@@ -24,7 +24,7 @@ function Track() {
         <li style={{ color: "darkred" }}>TypeScript</li>
       </ul>
 
-      <h2>Backend</h2>
+      <h3>Backend</h3>
       <ul>
         <li style={{ color: "darkred" }}>C</li>
         <li style={{ color: "darkred" }}>C++</li>
@@ -33,20 +33,20 @@ function Track() {
         <li style={{ color: "darkred" }}>Express</li>
       </ul>
 
-      <h2>DevOps</h2>
+      <h3>DevOps</h3>
       <ul>
         <li style={{ color: "darkred" }}>Docker</li>
         <li style={{ color: "darkred" }}>Kubernetes</li>
         <li style={{ color: "darkred" }}>AWS</li>
       </ul>
 
-      <h2>Networks</h2>
+      <h3>Networks</h3>
       <ul>
         <li style={{ color: "darkred" }}>Cybersecurity</li>
         <li style={{ color: "darkred" }}>Sockets</li>
       </ul>
 
-      <h2>Databases</h2>
+      <h3>Databases</h3>
       <ul>
         <li style={{ color: "darkred" }}>SQL</li>
         <li style={{ color: "darkred" }}>MongoDB</li>
@@ -54,7 +54,7 @@ function Track() {
         <li style={{ color: "darkred" }}>Apollo/GraphQL</li>
       </ul>
 
-      <h2>Computer Science & Engineering</h2>
+      <h3>Computer Science & Engineering</h3>
       <ul>
         <li style={{ color: "darkred" }}>Big O Notation</li>
         <li style={{ color: "darkred" }}>Algorithms</li>
@@ -66,7 +66,7 @@ function Track() {
         <li style={{ color: "darkred" }}>Linear Algebra</li>
       </ul>
 
-      <h2>Machine Learning & A.I.</h2>
+      <h3>Machine Learning & A.I.</h3>
       <ul>
         <li style={{ color: "darkred" }}>Deep Learning</li>
         <li style={{ color: "darkred" }}>Artificial Intelligence</li>
@@ -76,25 +76,11 @@ function Track() {
         <li style={{ color: "darkred" }}>Natural Language Processing</li>
       </ul>
 
-      <h2>Tools</h2>
+      <h3>Tools</h3>
       <ul>
         <li>Git</li>
         <li style={{ color: "darkred" }}>Webpack</li>
       </ul>
-
-      <h2>Other</h2>
-
-      {/*
-      <ul>
-        {group.map(tag => (
-          <li key={tag.fieldValue}>
-            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-              {tag.fieldValue} ({tag.totalCount})
-            </Link>
-          </li>
-        ))}
-      </ul>
-      */}
     </div>
   );
 }
