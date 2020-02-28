@@ -15,9 +15,9 @@ function Track() {
       </p>
       <h3>Frontend</h3>
       <ul>
-        <Link to="/guides/tags/react"><li>React</li></Link>
+        <Link to="/tags/react"><li>React</li></Link>
         <li style={{ color: "darkred" }}>Gatsby</li>
-        <Link to="/guides/tags/javascript"><li>JavaScript</li></Link>
+        <Link to="/tags/javascript"><li>JavaScript</li></Link>
         <li style={{ color: "darkred" }}>HTML/CSS</li>
         <li style={{ color: "darkred" }}>Next.js</li>
         <li style={{ color: "darkred" }}>Angular</li>
