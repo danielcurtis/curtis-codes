@@ -1,42 +1,31 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-import { MDXRenderer } from 'gatsby-plugin-mdx';
-import Img from "gatsby-image";
+import React from 'react'
+import { Link, graphql } from 'gatsby'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import Img from 'gatsby-image'
 
-import Layout from '../components/Layout';
-import SEO from '../components/seo';
+import Layout from '../components/Layout'
+import SEO from '../components/seo'
 
 function BlogTemplate(props) {
-  const { data } = props;
-  const post = data.mdx;
-  const siteTitle = data.site.siteMetadata.title;
-  const { prev, next } = props.pageContext;
-  const subs = 13;
-  let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid;
-
+  const { data } = props
+  const post = data.mdx
+  const siteTitle = data.site.siteMetadata.title
+  const { prev, next } = props.pageContext
   return (
     <Layout location={props.location} title={siteTitle}>
       <SEO title={post.frontmatter.title} />
-      <h1 style={{ marginTop: "20px" }}>
-        {post.frontmatter.title}
-      </h1>
+      <h1 style={{ marginTop: '20px' }}>{post.frontmatter.title}</h1>
       <p style={{ display: `block` }} className="sans">
-        <strong>Daniel Curtis | {post.frontmatter.date}</strong>
+        <strong>Written by Daniel Curtis on {post.frontmatter.date}</strong>
       </p>
       <MDXRenderer>{post.body}</MDXRenderer>
       <hr />
-      <p className="sans"><strong>
-        I enjoy building projects with code and writing about it. Join {subs} other
-        project-based learners & engineers and
-        <a
-          href="https://tinyletter.com/curtiscodes"
-          target="_blank"
-          rel="noopener noreferrer"
-          >
-          {` subscribe to my side pr0ject `}
-        </a>
-        if you do too!
-      </strong></p>
+      <p className="sans">
+        <strong>
+          I enjoy engineering software and writing about it. Follow me on{' '}
+          <a href="https://twitter.com/curtiscodes_">Twitter</a>!
+        </strong>
+      </p>
       <ul
         style={{
           display: `flex`,
@@ -62,10 +51,10 @@ function BlogTemplate(props) {
         </li>
       </ul>
     </Layout>
-  );
+  )
 }
 
-export default BlogTemplate;
+export default BlogTemplate
 
 export const pageQuery = graphql`
   query($slug: String!) {
@@ -83,13 +72,6 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         tags
-        featuredImage {
-          childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
       }
     }
   }

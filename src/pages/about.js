@@ -18,10 +18,11 @@ function About(props) {
       />
       <h2>About Me</h2>
       <p>
-        I wake up excited to learn and to encourage others through building
-        software projects. Currently, I'm focusing on Deep Learning in Python
-        while continually evolving my skillset in C, Node.js, and React. I'll be
-        searching for new professional opportunities in August 2020.
+        I wake up excited to learn through building software projects and
+        encourage others with similar ambitions. Currently, I'm focusing on Deep
+        Learning in Python while continually evolving my skillset in C, Node.js,
+        and React. I'll be searching for new professional opportunities in
+        August 2020.
       </p>
       <p>
         I was introduced to development when I was 14. My local city
@@ -34,14 +35,14 @@ function About(props) {
         and Docker.
       </p>
       <p>
-        Feel free to <a href="mailto:contactdcurtis@gmail.com">email me</a> or
-        connect on <a href="https://github.com/danielcurtis">GitHub</a> or{' '}
-        <a href="https://twitter.com/curtiscodes_">Twitter</a>.
-      </p>
-      <p>
         Below are <Link to="/about#references">my references</Link>, an outline
         of <Link to="/about#background">my background</Link>, and a categorical
         listing of <Link to="/about#articles">my articles</Link>.
+      </p>
+      <p>
+        Feel free to <a href="mailto:contactdcurtis@gmail.com">email me</a> or
+        connect on <a href="https://github.com/danielcurtis">GitHub</a> or{' '}
+        <a href="https://twitter.com/curtiscodes_">Twitter</a>.
       </p>
 
       <h2 id="references">References</h2>
@@ -98,9 +99,27 @@ function About(props) {
       </ol>
 
       <h2 id="articles">Article Categories</h2>
+      <h3>Frontend Languages</h3>
       <ul>
         <li>
+          <Link to="/tags/javascript">JavaScript</Link>
+        </li>
+        <li>
           <Link to="/tags/react">React</Link>
+        </li>
+      </ul>
+
+      <h3>Backend Languages</h3>
+      <ul>
+        <li>
+          <Link to="/tags/c">C</Link>
+        </li>
+      </ul>
+
+      <h3>Computer Science & Engineering</h3>
+      <ul>
+        <li>
+          <Link to="/tags/cybersecurity">Cybersecurity</Link>
         </li>
       </ul>
     </Layout>
