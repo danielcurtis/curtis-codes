@@ -1,8 +1,8 @@
 /* Global Styles */
 
 .light-mode {
-  --clr: #1A202C;
-  --bg: #FAFAFA;
+  --clr: #1a202c;
+  --bg: #f2f2f2;
   --link: blue;
   --element-bg: white;
   background: var(--bg);
@@ -10,8 +10,8 @@
 }
 
 .dark-mode {
-  --clr: #E2E8F0;
-  --bg: #0D0D0D;
+  --clr: #e2e8f0;
+  --bg: #0d0d0d;
   --link: rgb(27, 149, 224);
   --element-bg: #000000;
   background: var(--bg);
@@ -26,11 +26,11 @@
 }
 
 .condensed {
-  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeueBoldCondensed",
-    "HelveticaNeue-Bold-Condensed", "Helvetica Neue Bold Condensed",
-    "HelveticaNeueBold", "HelveticaNeue-Bold", "Helvetica Neue Bold",
-    "HelveticaNeue", "Helvetica Neue", "TeXGyreHerosCnBold", "Helvetica",
-    "Tahoma", "Geneva", "Arial Narrow", "Arial", sans-serif;
+  font-family: 'HelveticaNeue-CondensedBold', 'HelveticaNeueBoldCondensed',
+    'HelveticaNeue-Bold-Condensed', 'Helvetica Neue Bold Condensed',
+    'HelveticaNeueBold', 'HelveticaNeue-Bold', 'Helvetica Neue Bold',
+    'HelveticaNeue', 'Helvetica Neue', 'TeXGyreHerosCnBold', 'Helvetica',
+    'Tahoma', 'Geneva', 'Arial Narrow', 'Arial', sans-serif;
 }
 
 .spacer {
@@ -56,7 +56,8 @@ body {
   margin: auto;
   max-width: 800px;
   line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 h1 {
@@ -77,7 +78,7 @@ h2 {
 
 p {
   margin: 16px auto;
-  letter-spacing: .1px;
+  letter-spacing: 0.1px;
 }
 
 main {
@@ -93,8 +94,9 @@ a:hover {
   filter: brightness(1.2);
 }
 
-code, pre {
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+code,
+pre {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
     monospace;
   overflow-x: scroll;
   font-size: 16px;
@@ -109,7 +111,7 @@ blockquote {
   border-left: solid 3px var(--clr);
   margin: 0;
   padding: 15px 30px;
-  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier,
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier,
     monospace;
   font-weight: bold;
   background: var(--element-bg);
@@ -124,7 +126,7 @@ ol {
 ol > li {
   position: relative;
   margin: 0;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
   padding-left: 20px;
 }
 
@@ -200,7 +202,7 @@ ol > li:after {
   background: var(--bg);
   display: inline;
   padding: 8px 16px;
-  font-size: calc(14px + .5vw);
+  font-size: calc(14px + 0.5vw);
   box-shadow: 3px 3px 0px var(--clr);
 }
 
@@ -209,7 +211,7 @@ ol > li:after {
   color: var(--bg);
   border-color: var(--clr);
   padding: 8px 16px;
-  font-size: calc(14px + .5vw);
+  font-size: calc(14px + 0.5vw);
   border-width: 2px;
   box-shadow: 3px 3px 0px var(--clr);
 }
@@ -227,7 +229,7 @@ ol > li:after {
   border: none;
   font-size: 25px;
   color: var(--clr);
-  opacity: .8;
+  opacity: 0.8;
   outline: none;
   margin: 50px 0 0 0;
 }
@@ -243,34 +245,8 @@ ol > li:after {
   margin: 50px 0 0 0;
 }
 
-/* Index.js */
-.Index-social {
-  display: flex;
-  justify-content: space-around;
-}
-
-.Index-social > a:nth-of-type(2){
-  color: #CF4232;
-}
-
-.Index-social > a:nth-of-type(3){
-  color: #EB7F23;
-}
-
-.Index-social > a:nth-of-type(4){
-  color: #FAC023;
-}
-
-.Index-social > a:nth-of-type(5){
-  color: #068675;
-}
-
-.Index-social > a:nth-of-type(6){
-  color: #6B202E;
-}
-
 @media only screen and (max-width: 600px) {
-  .Index-social, .Stack {
+  .Stack {
     display: block;
   }
   .Stack-feat {
