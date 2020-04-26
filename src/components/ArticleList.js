@@ -16,7 +16,7 @@ function ArticleList(props) {
           <div key={node.fields.slug} className="Stack">
             <h3 className="Stack-h3 condensed">
               <Link
-                to={`/${node.fields.slug}`}
+                to={`/articles/${node.fields.slug}`}
                 style={{ color: '#1E6745' }} // colors[getRandomInt(5)]
               >
                 {title}
@@ -27,7 +27,7 @@ function ArticleList(props) {
                 return (
                   <Link
                     key={i}
-                    to={`/tags/${tag}`}
+                    to={`/articles/tags/${tag}`}
                     className="Stack-feat condensed"
                   >
                     {tag}

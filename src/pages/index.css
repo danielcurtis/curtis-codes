@@ -2,9 +2,9 @@
 
 .light-mode {
   --clr: #1a202c;
-  --bg: #f2f2f2;
+  --bg: #ffffff;
   --link: blue;
-  --element-bg: white;
+  --element-bg: #f3f3f3;
   background: var(--bg);
   color: var(--clr);
 }
@@ -23,6 +23,12 @@
   top: 20px;
   right: 20px;
   cursor: pointer;
+}
+
+.sans {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: -0.02rem;
 }
 
 .condensed {
@@ -56,8 +62,9 @@ body {
   margin: auto;
   max-width: 800px;
   line-height: 1.5;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  letter-spacing: -0.02rem;
 }
 
 h1 {
@@ -104,7 +111,6 @@ pre {
 
 pre {
   padding: 10px;
-  border-radius: 10px;
 }
 
 blockquote {
@@ -132,7 +138,7 @@ blockquote {
 
 .special-ol > li:before {
   content: '';
-  background-color: black;
+  background-color: var(--clr);
   position: absolute;
   bottom: 0px;
   top: 0px;
@@ -143,18 +149,19 @@ blockquote {
 .special-ol > li:after {
   content: '';
   position: absolute;
-  background-color: white;
+  background-color: var(--bg);
   left: 1px;
   top: 8px;
   height: 6px;
   width: 6px;
   border-radius: 100%;
-  border: 2px solid black;
+  border: 2px solid var(--clr);
 }
 
 table {
   border-spacing: 0;
   text-align: left;
+  border: 1px solid var(--clr);
 }
 
 th,
@@ -164,6 +171,7 @@ td {
 
 th {
   background-color: var(--bg);
+  border-bottom: 1px solid var(--clr);
 }
 
 tr:nth-child(odd) {
@@ -180,6 +188,8 @@ tr:nth-child(odd) {
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .Stack-h3 {

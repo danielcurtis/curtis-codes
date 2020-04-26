@@ -30,6 +30,7 @@ function Header(props) {
           className="Header-link condensed"
           activeClassName="Header-link-a condensed"
           to="/about"
+          partiallyActive={true}
         >
           About
         </Link>
@@ -37,6 +38,7 @@ function Header(props) {
           className="Header-link condensed"
           activeClassName="Header-link-a condensed"
           to="/articles"
+          partiallyActive={true}
         >
           Articles
         </Link>

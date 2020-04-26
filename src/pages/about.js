@@ -55,7 +55,7 @@ function About(props) {
       </ul>
 
       <p>
-        Below are <Link to="/about#references">my references</Link> and more
+        Below are a few <Link to="/about#references">references</Link> and more
         details on <Link to="/about#background">my background</Link>.
       </p>
 
@@ -102,13 +102,6 @@ function About(props) {
           <br />
           Earning my undergraduate in Computer Science as well as Cybersecurity.
           On pace to graduate in August 2020. 3.6 GPA.
-        </li>
-        <li>
-          <strong>Deep Learning Specialization</strong>
-          <br />
-          Working through Andrew Ng's Deep Learning and A.I. specialization
-          consisting of five courses taught by Stanford professors & industry
-          experts. On pace to complete the specialization in May 2020.
         </li>
         <li>
           <strong>Full-stack Certification</strong>

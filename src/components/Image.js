@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import React, { useEffect, useState } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 function Image() {
   const data = useStaticQuery(graphql`
@@ -13,29 +13,29 @@ function Image() {
         }
       }
     }
-  `);
+  `)
 
-  const [scroll, setScroll] = useState(0);
+  const [scroll, setScroll] = useState(0)
 
-  const handleScroll = (e) => {
-    setScroll(window.scrollY);
+  const handleScroll = e => {
+    setScroll(window.scrollY)
   }
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll, true);
-  }, []);
+    window.addEventListener('scroll', handleScroll, true)
+  }, [])
 
   return (
     <Img
       fixed={data.file.childImageSharp.fixed}
       alt="Daniel Curtis"
-      style={{ 
-        borderRadius: "100%", 
-        border: "2px solid black",
-        transform: `rotate(${scroll*2}deg)`
+      style={{
+        borderRadius: '100%',
+        border: '2px solid black',
+        transform: `rotate(${scroll * 2}deg)`,
       }}
-      />
-    );
+    />
+  )
 }
 
-export default Image;
+export default Image

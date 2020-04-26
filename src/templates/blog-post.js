@@ -15,41 +15,62 @@ function BlogTemplate(props) {
     <Layout location={props.location} title={siteTitle}>
       <SEO title={post.frontmatter.title} />
       <h1 style={{ marginTop: '20px' }}>{post.frontmatter.title}</h1>
-      <p style={{ display: `block` }} className="sans">
-        <strong>Updated by Daniel Curtis on {post.frontmatter.date}</strong>
+      <p style={{ display: `block` }}>
+        <em>Last updated {post.frontmatter.date}</em>
       </p>
       <MDXRenderer>{post.body}</MDXRenderer>
-      <hr />
-      <p className="sans">
-        <strong>
-          I enjoy engineering software and writing about it. Follow me on{' '}
-          <a href="https://twitter.com/curtiscodes_">Twitter</a>!
-        </strong>
-      </p>
-      <ul
+      <section
         style={{
-          display: `flex`,
-          flexWrap: `wrap`,
-          justifyContent: `space-between`,
-          listStyle: `none`,
-          padding: 0,
+          textAlign: `center`,
+          marginTop: `50px`,
+          background: `blue`,
+          padding: `20px 20px 10px 20px`,
+          color: `white`,
         }}
       >
-        <li>
-          {prev && (
-            <Link to={prev.fields.slug} rel="prev">
-              ← {prev.frontmatter.title}
-            </Link>
-          )}
-        </li>
-        <li>
-          {next && (
-            <Link to={next.fields.slug} rel="next">
-              {next.frontmatter.title} →
-            </Link>
-          )}
-        </li>
-      </ul>
+        <em>
+          I enjoy engineering software and writing about it. Follow me on{' '}
+          <a
+            style={{ color: `white`, textDecoration: `underline` }}
+            href="https://twitter.com/curtiscodes_"
+          >
+            Twitter
+          </a>{' '}
+          for updates!
+        </em>
+        <ul
+          style={{
+            display: `flex`,
+            flexWrap: `wrap`,
+            justifyContent: `space-between`,
+            listStyle: `none`,
+            padding: 0,
+          }}
+        >
+          <li>
+            {prev && (
+              <Link
+                style={{ color: `white`, textDecoration: `underline` }}
+                to={`/articles/${prev.fields.slug}`}
+                rel="prev"
+              >
+                ← {prev.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li>
+            {next && (
+              <Link
+                style={{ color: `white`, textDecoration: `underline` }}
+                to={`/articles/${next.fields.slug}`}
+                rel="next"
+              >
+                {next.frontmatter.title} →
+              </Link>
+            )}
+          </li>
+        </ul>
+      </section>
     </Layout>
   )
 }

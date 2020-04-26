@@ -1,15 +1,15 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react'
+import PropTypes from 'prop-types'
 
 // Components
-import { Link, graphql } from "gatsby"
-import Layout from "../components/Layout"
+import { Link, graphql } from 'gatsby'
+import Layout from '../components/Layout'
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMdx
   const tagHeader = `${totalCount} post${
-    totalCount === 1 ? "" : "s"
+    totalCount === 1 ? '' : 's'
   } tagged with "${tag}"`
 
   return (
@@ -22,7 +22,7 @@ const Tags = ({ pageContext, data }) => {
             const { title } = node.frontmatter
             return (
               <li key={slug}>
-                <Link to={slug}>{title}</Link>
+                <Link to={`/articles/${slug}`}>{title}</Link>
               </li>
             )
           })}
