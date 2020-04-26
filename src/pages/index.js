@@ -68,10 +68,10 @@ function Index(props) {
         <Image />
       </div>
 
-      <h2>Projects</h2>
+      <h2 className="h2-margin">Projects</h2>
       <Stack data={stackData[2]} />
 
-      <h2>Guides</h2>
+      <h2 className="h2-margin">Popular Articles</h2>
       <ArticleList posts={posts} />
     </Layout>
   )

@@ -67,13 +67,13 @@ h1 {
 }
 
 h2 {
-  margin-top: 10vh;
+  margin-top: 5vh;
   margin-bottom: 15px;
   font-size: 35px;
 }
 
 .h2-margin {
-  margin-top: 30px;
+  margin-top: 10vh;
 }
 
 p {
@@ -117,20 +117,20 @@ blockquote {
   background: var(--element-bg);
 }
 
-ol {
+.special-ol {
   list-style-type: none;
   padding-left: 0;
   margin-left: 0;
 }
 
-ol > li {
+.special-ol > li {
   position: relative;
   margin: 0;
   padding-bottom: 0.5em;
   padding-left: 20px;
 }
 
-ol > li:before {
+.special-ol > li:before {
   content: '';
   background-color: black;
   position: absolute;
@@ -140,7 +140,7 @@ ol > li:before {
   width: 2px;
 }
 
-ol > li:after {
+.special-ol > li:after {
   content: '';
   position: absolute;
   background-color: white;
@@ -150,6 +150,24 @@ ol > li:after {
   width: 6px;
   border-radius: 100%;
   border: 2px solid black;
+}
+
+table {
+  border-spacing: 0;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 5px 10px 5px 7px;
+}
+
+th {
+  background-color: var(--bg);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--element-bg);
 }
 
 /* Component Styles */

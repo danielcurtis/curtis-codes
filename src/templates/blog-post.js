@@ -16,7 +16,7 @@ function BlogTemplate(props) {
       <SEO title={post.frontmatter.title} />
       <h1 style={{ marginTop: '20px' }}>{post.frontmatter.title}</h1>
       <p style={{ display: `block` }} className="sans">
-        <strong>Written by Daniel Curtis on {post.frontmatter.date}</strong>
+        <strong>Updated by Daniel Curtis on {post.frontmatter.date}</strong>
       </p>
       <MDXRenderer>{post.body}</MDXRenderer>
       <hr />

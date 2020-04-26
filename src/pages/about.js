@@ -25,27 +25,43 @@ function About(props) {
         August 2020.
       </p>
       <p>
-        I was introduced to development when I was 14. My local city
-        commissioned me and two others to build their website in PHP and
-        JavaScript. Four years later, I enrolled in college for Computer Science
-        and Cybersecurity. I'm on pace to complete my undergraduate in August
-        2020. I worked at CBS Interactive as a Software Engineer Intern using C,
-        C++, and Node.js. I currently work at Ohio University's Office of
-        Technology as a Software Engineer Intern using Angular, Node.js, Java,
-        and Docker.
+        I'm also a believer that every paragraph over three sentences should be
+        bullet points:
       </p>
+      <ul>
+        <li>
+          <strong>Languages:</strong> C, C++, Python, NodeJS, React, JavaScript,
+          HTML/CSS
+        </li>
+        <li>
+          <strong>Tools:</strong> Docker, Git
+        </li>
+        <li>
+          <strong>Education:</strong> B.S. Computer Science & Cybersecurity
+        </li>
+        <li>
+          <strong>Experience:</strong> Frontend (1yr), Backend (1y)
+        </li>
+        <li>
+          <strong>Dream Job:</strong> Building a better tomorrow with Machine
+          Learning, C, & React
+        </li>
+        <li>
+          <strong>Contact:</strong>{' '}
+          <a href="mailto:contactdcurtis@gmail.com">Email</a>,{' '}
+          <a href="https://github.com/danielcurtis">GitHub</a>, &{' '}
+          <a href="https://twitter.com/curtiscodes_">Twitter</a>
+        </li>
+      </ul>
+
       <p>
-        Below are <Link to="/about#references">my references</Link>, an outline
-        of <Link to="/about#background">my background</Link>, and a categorical
-        listing of <Link to="/about#articles">my articles</Link>.
-      </p>
-      <p>
-        Feel free to <a href="mailto:contactdcurtis@gmail.com">email me</a> or
-        connect on <a href="https://github.com/danielcurtis">GitHub</a> or{' '}
-        <a href="https://twitter.com/curtiscodes_">Twitter</a>.
+        Below are <Link to="/about#references">my references</Link> and more
+        details on <Link to="/about#background">my background</Link>.
       </p>
 
-      <h2 id="references">References</h2>
+      <h2 id="references" className="h2-margin">
+        References
+      </h2>
       <blockquote>
         “I highly recommend Daniel. He has helped me with my growing business in
         several ways to become a local industry leader. He developed my website
@@ -56,8 +72,10 @@ function About(props) {
         <em>-Austin Montgomery</em>
       </blockquote>
 
-      <h2 id="background">Professional Background</h2>
-      <ol>
+      <h2 id="background" className="h2-margin">
+        Professional Background
+      </h2>
+      <ol className="special-ol">
         <li>
           <strong>Software Engineer Intern @ O.U. Office of Technology</strong>
           <br />
@@ -77,6 +95,8 @@ function About(props) {
           software written in C, C++, and Node.js for bugs and readability in
           2016.
         </li>
+      </ol>
+      <ol className="special-ol">
         <li>
           <strong>B.S. Computer Science & Cybersecurity</strong>
           <br />
@@ -97,31 +117,6 @@ function About(props) {
           certification by May 2020.
         </li>
       </ol>
-
-      <h2 id="articles">Article Categories</h2>
-      <h3>Frontend Languages</h3>
-      <ul>
-        <li>
-          <Link to="/tags/javascript">JavaScript</Link>
-        </li>
-        <li>
-          <Link to="/tags/react">React</Link>
-        </li>
-      </ul>
-
-      <h3>Backend Languages</h3>
-      <ul>
-        <li>
-          <Link to="/tags/c">C</Link>
-        </li>
-      </ul>
-
-      <h3>Computer Science & Engineering</h3>
-      <ul>
-        <li>
-          <Link to="/tags/cybersecurity">Cybersecurity</Link>
-        </li>
-      </ul>
     </Layout>
   )
 }
