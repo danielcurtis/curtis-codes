@@ -56,12 +56,11 @@ function Index(props) {
           justifyContent: 'space-between',
           overflowX: 'hidden',
         }}
+        className="sans"
       >
         <div>
-          <h2 style={{ marginTop: 0 }} className="sans">
-            Hello World, I'm Daniel Curtis
-          </h2>
-          <p style={{ maxWidth: '475px', marginLeft: 0 }} className="sans">
+          <h2 style={{ marginTop: 0 }}>Hello World, I'm Daniel Curtis</h2>
+          <p style={{ maxWidth: '475px', marginLeft: 0 }}>
             I’m a software engineer passionate about turning hard problems into
             1s and 0s. I break problems down to their first principles and use
             the Feynman method to learn about each building block. This site
@@ -71,10 +70,10 @@ function Index(props) {
         <Image />
       </div>
 
-      <h2 className="h2-margin sans">Projects</h2>
+      <h2 className="h2-margin">Projects</h2>
       <Stack data={stackData[2]} />
 
-      <h2 className="h2-margin sans">Popular Articles</h2>
+      <h2 className="h2-margin">Popular Articles</h2>
       <ArticleList posts={posts} />
     </Layout>
   )

@@ -1,7 +1,7 @@
 ---
-title: Two Sum Algorithm in JavaScript
+title: Two Sum Algorithm in JavaScript (NodeJS)
 date: '2020-02-07T22:12:03.284Z'
-tags: ['algorithms', 'javascript']
+tags: ['algorithms', 'node']
 ---
 
 I'm going to start solving algorithm challenges and writing about my methods in varrying languages from LeetCode. I'll probably focus on JavaScript and C/C++. This is the first problem I've ever attempted. I'll focus on harder one's from here on out.
