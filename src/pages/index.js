@@ -61,10 +61,10 @@ function Index(props) {
         <div>
           <h2 style={{ marginTop: 0 }}>Hello World, I'm Daniel Curtis</h2>
           <p style={{ maxWidth: '475px', marginLeft: 0 }}>
-            I’m a software engineer passionate about turning hard problems into
-            1s and 0s. I break problems down to their first principles and use
-            the Feynman method to learn about each building block. This site
-            serves as a platform for my summarizations and solutions.
+            I’m a software engineer passionate about helping others by turning
+            hard problems into 1s and 0s. I'm specifically interested in Machine
+            Learning and Full-stack Development.{' '}
+            <em>I'll be open to new opportunities in September 2020.</em>
           </p>
         </div>
         <Image />
