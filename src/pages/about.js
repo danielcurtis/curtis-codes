@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react'
-import { Link, graphql } from 'gatsby'
+import React, { useState, useEffect } from 'react';
+import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
-import './index.css'
+import Layout from '../components/Layout';
+import SEO from '../components/seo';
+import './index.css';
 
 function About(props) {
-  const [toggle, setToggle] = useState(true)
-  const { data } = props
-  const siteTitle = data.site.siteMetadata.title
+  const [toggle, setToggle] = useState(true);
+  const { data } = props;
+  const siteTitle = data.site.siteMetadata.title;
 
   return (
     <Layout location={props.location} title={siteTitle}>
-      <div className="sans">
+      <div>
         <SEO
           title="About Me"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -62,7 +62,7 @@ function About(props) {
           </dd>
         </dl>
 
-        <h2 className="h2-margin">Other People's Opinions:</h2>
+        <h2>Other People's Opinions:</h2>
         <blockquote>
           “I highly recommend Daniel. He has helped me with my growing business
           in several ways to become a local industry leader. He developed my
@@ -74,10 +74,10 @@ function About(props) {
         </blockquote>
       </div>
     </Layout>
-  )
+  );
 }
 
-export default About
+export default About;
 
 export const pageQuery = graphql`
   query {
@@ -105,4 +105,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

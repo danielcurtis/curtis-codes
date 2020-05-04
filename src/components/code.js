@@ -1,8 +1,8 @@
-import React from 'react'
-import { render } from 'react-dom'
-import Highlight, { defaultProps } from 'prism-react-renderer'
-import dracula from "prism-react-renderer/themes/dracula";
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
+import React from 'react';
+import { render } from 'react-dom';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import dracula from 'prism-react-renderer/themes/dracula';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 
 export const Code = ({ codeString, language, ...props }) => {
   if (props['react-live']) {
@@ -11,10 +11,15 @@ export const Code = ({ codeString, language, ...props }) => {
         <LiveError />
         <LivePreview />
       </LiveProvider>
-    )
+    );
   } else {
     return (
-      <Highlight {...defaultProps} code={codeString} language={language} theme={dracula}>
+      <Highlight
+        {...defaultProps}
+        code={codeString}
+        language={language}
+        theme={dracula}
+      >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre className={className} style={style}>
             {tokens.map((line, i) => (
@@ -27,6 +32,6 @@ export const Code = ({ codeString, language, ...props }) => {
           </pre>
         )}
       </Highlight>
-    )
+    );
   }
-}
+};

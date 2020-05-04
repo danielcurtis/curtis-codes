@@ -3,7 +3,7 @@ import '../pages/index.css';
 
 function Footer() {
   return (
-    <div className="Footer">
+    <div>
       <code>
         © {new Date().getFullYear()} Daniel Curtis&nbsp;|&nbsp;
         <a href="mailto:contactdcurtis@gmail.com">Email</a>

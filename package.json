@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Daniel Curtis <contactdcurtis@gmail.com>",
   "dependencies": {
+    "98.css": "^0.1.11",
     "@mdx-js/mdx": "^1.4.0",
     "@mdx-js/react": "^1.4.0",
     "@mdx-js/tag": "^0.20.3",

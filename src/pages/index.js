@@ -1,23 +1,24 @@
-import React, { useEffect, useState } from 'react'
-import { Link, graphql } from 'gatsby'
+import React, { useEffect, useState } from 'react';
+import { Link, graphql } from 'gatsby';
 import {
   FaGithub,
   FaRegEnvelope,
   FaTwitter,
   FaRegNewspaper,
-} from 'react-icons/fa'
+} from 'react-icons/fa';
+import '98.css';
+import './index.css';
 
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
-import Stack from '../components/Stack'
-import Image from '../components/Image'
-import './index.css'
-import ArticleList from '../components/ArticleList'
+import Layout from '../components/Layout';
+import SEO from '../components/seo';
+import Stack from '../components/Stack';
+import Image from '../components/Image';
+import ArticleList from '../components/ArticleList';
 
 function Index(props) {
-  const { data } = props
-  const siteTitle = data.site.siteMetadata.title
-  const posts = data.allMdx.edges
+  const { data } = props;
+  const siteTitle = data.site.siteMetadata.title;
+  const posts = data.allMdx.edges;
   const stackData = [
     {
       name: 'GroupedUp - Build lasting habits through structured groups',
@@ -39,7 +40,7 @@ function Index(props) {
       link: '',
       feat: 'Open Source',
     },
-  ]
+  ];
 
   return (
     <Layout location={props.location} title={siteTitle}>
@@ -48,19 +49,10 @@ function Index(props) {
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
 
-      <div
-        style={{
-          display: 'flex',
-          height: '100%',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          overflowX: 'hidden',
-        }}
-        className="sans"
-      >
+      <div>
         <div>
-          <h2 style={{ marginTop: 0 }}>Hello World, I'm Daniel Curtis</h2>
-          <p style={{ maxWidth: '475px', marginLeft: 0 }}>
+          <h2>Hello World, I'm Daniel Curtis</h2>
+          <p>
             I’m a software engineer passionate about helping others by turning
             hard problems into 1s and 0s. I'm specifically interested in Machine
             Learning and Full-stack Development.{' '}
@@ -70,16 +62,16 @@ function Index(props) {
         <Image />
       </div>
 
-      <h2 className="h2-margin">Projects</h2>
+      <h2>Projects</h2>
       <Stack data={stackData[2]} />
 
-      <h2 className="h2-margin">Popular Articles</h2>
+      <h2>Popular Articles</h2>
       <ArticleList posts={posts} />
     </Layout>
-  )
+  );
 }
 
-export default Index
+export default Index;
 
 export const pageQuery = graphql`
   query {
@@ -107,4 +99,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

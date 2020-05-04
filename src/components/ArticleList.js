@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React from 'react';
+import { Link } from 'gatsby';
 
-import '../pages/index.css'
+import '../pages/index.css';
 
 function ArticleList(props) {
   // random color generator
@@ -11,35 +11,26 @@ function ArticleList(props) {
   return (
     <>
       {props.posts.map(({ node }, i) => {
-        const title = node.frontmatter.title || node.fields.slug
+        const title = node.frontmatter.title || node.fields.slug;
         return (
-          <div key={node.fields.slug} className="Stack">
-            <h3 className="Stack-h3 condensed">
-              <Link
-                to={`/articles/${node.fields.slug}`}
-                style={{ color: '#1E6745' }} // colors[getRandomInt(5)]
-              >
-                {title}
-              </Link>
+          <div key={node.fields.slug}>
+            <h3>
+              <Link to={`/articles/${node.fields.slug}`}>{title}</Link>
             </h3>
             <div>
               {node.frontmatter.tags.map((tag, i) => {
                 return (
-                  <Link
-                    key={i}
-                    to={`/articles/tags/${tag}`}
-                    className="Stack-feat condensed"
-                  >
+                  <Link key={i} to={`/articles/tags/${tag}`}>
                     {tag}
                   </Link>
-                )
+                );
               })}
             </div>
           </div>
-        )
+        );
       })}
     </>
-  )
+  );
 }
 
-export default ArticleList
+export default ArticleList;

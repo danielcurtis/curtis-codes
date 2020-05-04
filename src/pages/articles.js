@@ -1,7 +1,7 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import Layout from '../components/Layout'
-import SEO from '../components/seo'
+import React from 'react';
+import { Link } from 'gatsby';
+import Layout from '../components/Layout';
+import SEO from '../components/seo';
 
 function Articles() {
   return (
@@ -10,7 +10,7 @@ function Articles() {
         title="Articles"
         keywords={[`blog`, `gatsby`, `javascript`, `react`]}
       />
-      <div className="sans">
+      <div>
         <h2>Articles by Category</h2>
         <h3>Frontend Languages</h3>
         <Link to="/articles/tags/javascript">JavaScript</Link>
@@ -36,7 +36,7 @@ function Articles() {
         </Link>
       </div>
     </Layout>
-  )
+  );
 }
 
-export default Articles
+export default Articles;

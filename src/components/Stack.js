@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import '../pages/index.css'
+import React from 'react';
+import { Link } from 'gatsby';
+import '../pages/index.css';
 
 function Stack(props) {
   // random color generator
@@ -8,20 +8,15 @@ function Stack(props) {
   // const getRandomInt = max => Math.floor(Math.random() * Math.floor(max))
 
   return (
-    <div className="Stack">
-      <h3 className="Stack-h3 condensed">
-        <a
-          href={props.data.link}
-          style={{ color: '#1E6745' }}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+    <div>
+      <h3>
+        <a href={props.data.link} target="_blank" rel="noopener noreferrer">
           {props.data.name}
         </a>
       </h3>
-      <span className="Stack-feat condensed">{props.data.feat}</span>
+      <span>{props.data.feat}</span>
     </div>
-  )
+  );
 }
 
-export default Stack
+export default Stack;
