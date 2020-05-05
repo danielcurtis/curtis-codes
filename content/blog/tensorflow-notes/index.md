@@ -4,6 +4,8 @@ date: '2020-01-10T22:12:03.284Z'
 tags: ['tensorflow', 'machine-learning']
 ---
 
+**These are my study notes based off Coursera's [Intro to TensorFlow for AI, ML, and Deep Learning](https://www.coursera.org/learn/introduction-tensorflow/), which I would highly recommend for getting started in TensorFlow. After getting the basics down, I used the tutorials and challenges on TensorFlow's documentation site to keep learning.**
+
 ## What is Machine Learning
 
 In traditional programming, programmers solve problems by breaking them down into steps that a computer can do. In machine learning, programmers solve problems by teaching the computer how they problem solve. Instead of giving the computer a problem and the steps to solve it, we give the computer a problem and an answer to let the computer solve it for itself.
@@ -49,3 +51,11 @@ model.fit(xs, ys, epochs=500)
 # Get an answer for a number
 print(model.predict([10]))
 ```
+
+## Diving Deeper into Data
+
+The first example is pretty simple. Typically, we'll be handling a lot more data than an array of five numbers. If we have a dataset of a million faces, we would use maybe 80% of them to train the model like the arrays above. And then we could use the remaining 20% to test our model.
+
+Let's say we were creating a computer vision API that can tell if somebody is smiling, frowning or straightfaced. Our `xs` dataset would be the image faces. The `ys` would be our "answers" known as the label. But instead of labeling every image as frowning, smiling or straightface, we would use a 1, 2 or 3 because it removes bias and computers handle numbers better.
+
+How does it remove bias? Say instead we're labeling types of soda. Well if you're from my neck of the woods, we would actaully be labeling pop. And if we were from the south, we would be labeling coke as coke and sprite as coke because everything's coke! That's a silly example but it is extremely important that our models do not include our own biases.
