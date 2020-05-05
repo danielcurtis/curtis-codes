@@ -1,6 +1,6 @@
 ---
-title: C for Absolute Beginners
-date: '2020-04-27T22:12:03.284Z'
+title: Hello World in C
+date: '2020-05-04T22:12:03.284Z'
 tags: ['c']
 ---
 
@@ -8,7 +8,7 @@ tags: ['c']
 
 You've probably heard C has a steep learning curve. I don't believe that to be true. I believe other languages such as Python or JavaScript are easier because there are a lot more resources to learn them. Another reason is that there is virtually nothing pre-built in C, so it requires the learner to build their own data strucure or function like a hashmap (just a fancy way to store key-value pairs) instead of importing it and not truly understanding what's going on. So in that sense, C is harder because it requires understanding programming from first principles.
 
-## The Basics
+## The Main Function
 
 C is a compiled language so it requires running code through a compiler like GCC which generates an executable. The executable can then be ran in the command line.
 
