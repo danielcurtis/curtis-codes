@@ -3,11 +3,20 @@ import '../pages/index.css';
 
 function Footer() {
   return (
-    <div>
-      <code>
-        © {new Date().getFullYear()} Daniel Curtis&nbsp;|&nbsp;
-        <a href="mailto:contactdcurtis@gmail.com">Email</a>
-      </code>
+    <div
+      style={{
+        position: 'fixed',
+        bottom: 0,
+        height: '25px',
+        width: '100vw',
+        background: 'lightgrey',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      <button>Start</button>
+      <span>© {new Date().getFullYear()} Daniel Curtis</span>
     </div>
   );
 }

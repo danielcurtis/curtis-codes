@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
-
-import Header from './Header';
 import Footer from './Footer';
-import Sidebar from './Sidebar';
+import '98.css';
+import './index.css';
 
 function Layout({ children }) {
   const [colorMode, setColorMode] = useState('Sunshine');
@@ -28,21 +27,8 @@ function Layout({ children }) {
 
   return (
     <div className={colorMode}>
-      <div style={{ display: 'flex' }}>
-        <div
-          style={{
-            width: '300px',
-            height: '100vh',
-            background: 'silver',
-            borderRight: '1px solid darkgrey',
-            position: 'fixed',
-          }}
-        >
-          <Sidebar />
-        </div>
-        <main style={{ margin: 'auto 10px auto 320px', maxWidth: '1000px' }}>
-          {children}
-        </main>
+      <div>
+        <main>{children}</main>
       </div>
       <Footer />
     </div>

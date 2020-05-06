@@ -47,10 +47,11 @@ For a long time there weren't booleans (true/false) in C, and we just used 0 for
 
 ```c
 #include <stdio.h>
+
 // Include the header file
 #include <stdbool.h>
-
-// Or create the bool data type with typedef (don't do both like me!)
+// Or create the bool data type with typedef
+// .. don't do both like me !
 typedef enum {false, true} bool;
 
 int main() {
