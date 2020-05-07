@@ -57,3 +57,59 @@ Open **sh**ell in running container
 
 Or use `run` if you aren't running other processes
 `docker run -it containerId sh`
+
+### Creating Images
+
+Curios on how Docker images are created? They're built from configuration files called Dockerfiles. It's pretty easy to get started:
+
+1. Create docker file named `Dockerfile`. (Just a file telling Docker how to make a container)
+2. Specify the base image in the Dockerfile. (You gotta start with somewhere)
+3. Specify the commands to run while building the image.
+4. Specify the command that runs when the container is ran.
+
+```dockerfile
+# Specify docker image base
+FROM ubuntu
+
+# Specify commands to run while building
+RUN apt-get npm
+
+# Specify command to be run on start
+CMD npm run dev
+```
+
+_Note, the example above probably won't work. I didn't test if those names correlate with actual Docker images._
+
+After creating an image, you can build it from the directory where the Dockerfile is located with:
+
+```bash
+docker build .
+```
+
+The `.` stands for the _build context_. For now, that just means we're building it where we're located at in the file structure, but more on this later.
+
+The command line output will have steps printed out that coordinate with the steps specified in the Dockerfile. For example, running the example I have above would output three steps. At the end, you should get an ID that can be used to run the new container with the run command!
+
+```bash
+docker run someHashId
+```
+
+At every step of building an image, Docker creates a temporary image and stores it in the cache. This is important because if you make a change to the Docker file, it will start from the beginning of the file and use cached "steps" until it comes across something new. Docker saves a lot of build time this way.
+
+Instead of using that hash of digits for an ID, we can specify a tag to use instead with the `-t` option:
+
+```bash
+docker build -t dockerID/projectName:version .
+docker run dockerID/projectName:version || latest
+```
+
+When we create a Docker account on DockerHub, we setup a Docker ID. The above syntax is how everybody names their images, the exception being community images such as ubutnu or reddis. We use our docker id / our project name / the version number. The tag is technically the version number, and the name is our docker id / project name. We can run images without specifying the tag (version), and Docker will automatically run the latest version. Docker images kept on DockerHub or locally should be versioned just like software on GitHub. For example:
+
+```bash
+docker build danielcurtis/superCoolApp:1.0
+docker run danielcurtis/superCoolApp:1.0
+
+OR
+
+docker run danielcurtis/superCoolApp
+```
