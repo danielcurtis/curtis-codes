@@ -59,3 +59,7 @@ The first example is pretty simple. Typically, we'll be handling a lot more data
 Let's say we were creating a computer vision API that can tell if somebody is smiling, frowning or straightfaced. Our `xs` dataset would be the image faces. The `ys` would be our "answers" known as the label. But instead of labeling every image as frowning, smiling or straightface, we would use a 1, 2 or 3 because it removes bias and computers handle numbers better.
 
 How does it remove bias? Say instead we're labeling types of soda. Well if you're from my neck of the woods, we would actaully be labeling pop. And if we were from the south, we would be labeling coke as coke and sprite as coke because everything's coke! That's a silly example but it is extremely important that our models do not include our own biases.
+
+## Keras Sequential
+
+Keras uses sequential's to define models. Creating models gets more complicated than the example above with more data. Seqential's are made up of layers. The first and last layers are the most important. The first defines the _shape_ of the data. The last layer defines how many neurons to use, which correlates with how many labels there are for the data. The middle layer is the neural network which carries out the complex mathematical functions.
