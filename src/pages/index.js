@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
+import IndexRoutes from '../components/IndexRoutes';
 
 function Index() {
   const data = useStaticQuery(graphql`
     query {
-      desktop: file(relativePath: { eq: "bg.png" }) {
+      desktop: file(relativePath: { eq: "bg.jpg" }) {
         childImageSharp {
           fluid(quality: 90, maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp
@@ -35,7 +36,9 @@ function Index() {
           title="About Me"
           keywords={['software', 'engineer', 'portfolio', 'website']}
         />
-        <h2>gatsby-background-image</h2>
+        <div style={{ width: '100vw', height: 'calc(100vh - 25px)' }}>
+          <IndexRoutes />
+        </div>
       </Layout>
     </BackgroundImage>
   );

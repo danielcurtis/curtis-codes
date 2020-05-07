@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
-function Icons({ active, setActive }) {
+function Icons({ setActive }) {
   const data = useStaticQuery(graphql`
     query {
       doc: file(relativePath: { eq: "doc.png" }) {
@@ -61,9 +61,8 @@ function Icons({ active, setActive }) {
           <div
             onClick={() => setActive(el)}
             style={{
-              margin: '10px',
+              padding: '10px',
               textAlign: 'center',
-              background: 'green',
               cursor: 'pointer',
             }}
           >
@@ -72,20 +71,27 @@ function Icons({ active, setActive }) {
               fluid={data[path[i]].childImageSharp.fluid}
               alt={alts[i]}
             />
-            <label>{el}</label>
+            <label
+              style={{
+                background: 'teal',
+                color: 'white',
+                padding: '2px',
+                marginTop: '3px',
+              }}
+            >
+              {el}
+            </label>
           </div>
         );
       })}
 
       {href.map((el, i) => {
         return (
-          <a href={el}>
+          <a href={el} style={{ textDecoration: 'none' }}>
             <div
               style={{
-                margin: '10px',
+                padding: '10px',
                 textAlign: 'center',
-                background: 'green',
-                cursor: 'pointer',
               }}
             >
               <Img
@@ -93,7 +99,16 @@ function Icons({ active, setActive }) {
                 fluid={data[pth2[i]].childImageSharp.fluid}
                 alt="Link icon"
               />
-              <label>{link[i]}</label>
+              <label
+                style={{
+                  background: 'teal',
+                  color: 'white',
+                  padding: '2px',
+                  marginTop: '3px',
+                }}
+              >
+                {link[i]}
+              </label>
             </div>
           </a>
         );

@@ -3,7 +3,6 @@ import { Link, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
-import './index.css';
 
 function About(props) {
   const [toggle, setToggle] = useState(true);
