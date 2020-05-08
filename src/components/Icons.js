@@ -55,7 +55,7 @@ function Icons({ setActive }) {
   const pth2 = ['eml', 'lnk', 'lnk', 'lnk'];
 
   return (
-    <div style={{ width: '70px' }}>
+    <div style={{ width: '70px', maxHeight: 'calc(100vh - 25px)' }}>
       {name.map((el, i) => {
         return (
           <div
@@ -67,7 +67,11 @@ function Icons({ setActive }) {
             }}
           >
             <Img
-              style={{ maxWidth: '50px', maxHeight: '50px' }}
+              style={{
+                maxWidth: 'calc(10px + 5vh)',
+                maxHeight: 'calc(10px + 5vh)',
+                margin: 'auto',
+              }}
               fluid={data[path[i]].childImageSharp.fluid}
               alt={alts[i]}
             />
@@ -95,7 +99,11 @@ function Icons({ setActive }) {
               }}
             >
               <Img
-                style={{ maxWidth: '50px', maxHeight: '50px' }}
+                style={{
+                  maxWidth: 'calc(10px + 5vh)',
+                  maxHeight: 'calc(10px + 5vh)',
+                  margin: 'auto',
+                }}
                 fluid={data[pth2[i]].childImageSharp.fluid}
                 alt="Link icon"
               />

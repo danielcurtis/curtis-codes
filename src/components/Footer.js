@@ -14,7 +14,9 @@ function Footer() {
         alignItems: 'center',
       }}
     >
-      <button>Start</button>
+      <button>
+        <strong>Start</strong>
+      </button>
       <span>© {new Date().getFullYear()} Daniel Curtis</span>
     </div>
   );

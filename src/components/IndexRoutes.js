@@ -26,12 +26,13 @@ function IndexRoutes() {
         <div
           className="window"
           style={{
-            width: '1200px',
+            maxWidth: '960px',
             zIndex: 1,
-            margin: 'auto',
-            top: 15,
-            right: 15,
+            left: '0',
+            right: '0',
+            top: '0',
             position: 'absolute',
+            margin: 'auto',
           }}
         >
           <div className="title-bar">
