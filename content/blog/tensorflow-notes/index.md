@@ -63,3 +63,55 @@ How does it remove bias? Say instead we're labeling types of soda. Well if you'r
 ## Keras Sequential
 
 Keras uses sequential's to define models. Creating models gets more complicated than the example above with more data. Seqential's are made up of layers. The first and last layers are the most important. The first defines the _shape_ of the data. The last layer defines how many neurons to use, which correlates with how many labels there are for the data. The middle layer is the neural network which carries out the complex mathematical functions.
+
+## Convolutions and Pooling
+
+Convolution means to only focus on the important things in image processing. For example, if we take a pixel in an image and every on of its neighbours. We will have a 9x9 matrix that could look like:
+
+```
+0   4   8
+2   8   4
+4   2   6
+```
+
+Then we would apply some "filter" to the matrix like:
+
+```
+0   0   0
+1   1   1
+2   2   2
+```
+
+The pixel would be the two every number multiplied and added, for example:
+
+```
+0 + 0 + 0 +
+2 + 8 + 4 +
+8 + 4 + 12
+```
+
+So the middle pixel would have a value of 38. That's all a convolution is. Adding different filters can change images in powerful ways.
+
+Pooling is a way to compress images and iterate over the pixels in an image. You would set some rule and then iterate over the image based on that rule. For example, you could choose 4 pixel blocks and only keep the largest value which would keep the most important features while shrinking the image size by 75%.
+
+### Coding Convolutions and Pooling
+
+Let's define a model in TensorFlow:
+
+```py
+model = td.keras.models.Sequential({
+  # Generate 64 filters that are 3x3 (known good filters)
+  tf.keras.layers.Conv2D(64, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+  # Create pooling layer that is 2x2
+  tf.keras.layers.MaxPooling2D(2, 2),
+  # Generate another 64 filters that are 3x3
+  tf.keras.layers.Conv2D(64, (3, 3), activation='relu'),
+  # Create another pooling layer that is 2x2
+  tf.keras.layers.MaxPooling2D(2, 2),
+  # Now the data can be flattened, and has reduced to half twice
+  tf.keras.layers.Flatten(),
+  tf.keras.layers.Dense(128, activation='relu'),
+  tf.keras.layers.Dense(10, activation='softmax')
+})
+
+```
