@@ -1,6 +1,8 @@
 import React from 'react';
-import dracula from 'prism-react-renderer/themes/dracula';
-import { LiveProvider, LiveError, LivePreview } from 'react-live';
+import { render } from 'react-dom';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import github from 'prism-react-renderer/themes/github';
+import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
 
 export const Code = ({ codeString, language, ...props }) => {
   if (props['react-live']) {
@@ -16,7 +18,7 @@ export const Code = ({ codeString, language, ...props }) => {
         {...defaultProps}
         code={codeString}
         language={language}
-        theme={dracula}
+        theme={github}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre className={className} style={style}>

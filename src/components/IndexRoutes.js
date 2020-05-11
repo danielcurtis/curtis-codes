@@ -30,7 +30,7 @@ function IndexRoutes() {
             zIndex: 1,
             left: '0',
             right: '0',
-            top: '0',
+            top: '5vh',
             position: 'absolute',
             margin: 'auto',
           }}
@@ -50,6 +50,10 @@ function IndexRoutes() {
               fontFamily: 'Arial',
               fontSize: '14px',
               webkitFontSmoothing: 'auto',
+              maxHeight: '80vh',
+              overflowY: 'scroll',
+              margin: '0 0 0 10px',
+              paddingBottom: '15px',
             }}
           >
             {component}

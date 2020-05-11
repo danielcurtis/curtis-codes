@@ -17,7 +17,9 @@ function Footer() {
       <button>
         <strong>Start</strong>
       </button>
-      <span>© {new Date().getFullYear()} Daniel Curtis</span>
+      <span style={{ marginRight: '20px' }}>
+        © {new Date().getFullYear()} Daniel Curtis
+      </span>
     </div>
   );
 }
