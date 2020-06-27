@@ -1,158 +1,153 @@
-/* Light & Dark Themes */
-.light-mode {
-  --clr: #1a202c;
-  --bg: #ffffff;
-  --link: blue;
-  --element-bg: #f3f3f3;
-  background: var(--bg);
-  color: var(--clr);
-}
-
-.dark-mode {
-  --clr: #e2e8f0;
-  --bg: #0d0d0d;
-  --link: rgb(27, 149, 224);
-  --element-bg: #000000;
-  background: var(--bg);
-  color: var(--clr);
-}
-
-.modeIcon {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
-
 /* Global Styles */
-
 html,
 body {
-  font-size: 16px !important;
+  font-size: 18px !important;
   padding: 0;
   margin: 0;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
-
 p,
 ul,
 li {
   line-height: 1.5 !important;
 }
-
 h1 {
-  font-size: calc(5vh + 20px);
+  font-size: calc(2vw + 20px);
+  margin-bottom: 0;
 }
-
 blockquote {
   background-color: #d3d3d3;
   padding: 1rem 2rem;
   margin: 0;
-  border-left: solid 4px black;
+}
+blockquote footer {
+  margin: 12px 0 0 12px;
+}
+button {
+  font-size: large !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16px !important;
+  min-height: 25px;
 }
 
-code,
-code[class*='language-'],
-pre[class*='language-'] {
-  color: #333;
-  text-align: left;
-  white-space: pre;
-  word-spacing: normal;
-  tab-size: 4;
-  hyphens: none;
-  font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  line-height: 1.4;
-  direction: ltr;
-  cursor: text;
+/* Global Classes */
+.title-bar {
+  display: flex;
+}
+.title-bar-text {
+  width: 100%;
+}
+.title-bar-controls {
+  width: 20px;
+}
+.flex-break {
+  display: flex;
+}
+.win-space {
+  padding: 3vh 8vw;
+}
+.main-win {
+  max-width: 960px;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 5vh;
+  position: absolute;
+  margin: auto;
+}
+.mine-win {
+  width: 378px;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 5vh;
+  position: absolute;
+  margin: auto;
 }
 
-pre[class*='language-'] {
-  overflow: auto;
-  margin: 1em 0;
-  padding: 1.2em;
-  border-radius: 3px;
-  font-size: 85%;
-}
-
-p code,
-li code,
-table code {
-  margin: 0;
-  border-radius: 3px;
-  padding: 0.2em 0;
-  font-size: 85%;
-}
-p code:before,
-p code:after,
-li code:before,
-li code:after,
-table code:before,
-table code:after {
-  letter-spacing: -0.2em;
-  content: '\00a0';
-}
-
-code,
-:not(pre) > code[class*='language-'],
-pre[class*='language-'] {
-  background: #f7f7f7;
-}
-
-:not(pre) > code[class*='language-'] {
-  padding: 0.1em;
-  border-radius: 0.3em;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-  color: #969896;
-}
-.token.punctuation,
-.token.string,
-.token.atrule,
-.token.attr-value {
-  color: #183691;
-}
-.token.property,
-.token.tag {
-  color: #63a35c;
-}
-.token.boolean,
-.token.number {
-  color: #0086b3;
-}
-.token.selector,
-.token.attr-name,
-.token.attr-value .punctuation:first-child,
-.token.keyword,
-.token.regex,
-.token.important {
-  color: #795da3;
-}
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string {
-  color: #a71d5d;
-}
-.token.entity {
-  cursor: help;
-}
-
-.namespace {
-  opacity: 0.7;
-}
-
-/* About.js Flexbox */
-.About {
+/* About.js */
+.About-top {
+  margin: 5vh 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.About-top-txt {
+  margin-right: 15px;
+  max-width: 850px;
+}
+.About-img {
+  margin: 0 3vw 0 0;
+  max-height: 200px;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+}
 
-@media only screen and (max-width: 600px) {
-  .About {
+/* Articles.js */
+.Article-h2 {
+  font-size: larger;
+}
+.Article-title {
+  display: flex;
+  align-items: center;
+}
+
+/* Block.js */
+.Block {
+  width: 40px;
+  height: 40px;
+  float: left;
+  cursor: pointer;
+}
+
+.Block-active {
+  box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
+
+/* Board */
+.Board {
+  width: 378px;
+}
+
+/* Projects.js */
+.Project {
+  margin-top: 12px !important;
+  padding-top: 22px !important;
+  background: #fff;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf,
+    inset 2px 2px #0a0a0a;
+  padding: 12px 8px;
+  margin: 0;
+  font-family: 'Pixelated MS Sans Serif', Arial;
+}
+.Project-h2 {
+  font-size: 18px;
+  padding-left: 22px;
+}
+
+/* Icons.js */
+.Icons {
+  width: 70px;
+  max-height: calc(100vh - 25px);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 700px) {
+  .About-top,
+  .flex-break {
     flex-direction: column;
+  }
+  .tree-view {
+    width: 65vw !important;
+  }
+  .About-img {
+    margin: auto 10px 30px auto;
+    max-height: 250px;
   }
 }
