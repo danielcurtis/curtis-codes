@@ -1,79 +1,56 @@
-import React from 'react';
-import { Link } from 'gatsby';
+import React, { useState, useEffect } from 'react';
+import Article from './children/Article';
 
 function Articles() {
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState();
+  const [sort, setSort] = useState(false);
+
+  useEffect(() => {
+    fetch('https://dev.to/api/articles?username=curtiscodes')
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setData(result);
+          setLoading(false);
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+        }
+      );
+  }, []);
+
+  const sortData = () => {
+    if (sort) {
+      data.sort((a, b) =>
+        a.public_reactions_count > b.public_reactions_count ? 1 : -1
+      );
+    } else {
+      data.sort((a, b) => (a.edited_at > b.edited_at ? 1 : -1));
+    }
+  };
+
+  // true == by date; false == by popularity
+  const updateSort = (val) => {
+    setSort(val);
+    sortData();
+  };
+
   return (
-    <div style={{ marginRight: '10px' }}>
+    <div className="win-space">
       <h1>Articles</h1>
       <p>
-        I write 1000 words every day about what I do and don't know. This
-        reduces the bottleneck between "knowing a topic" and "being able to
-        explain a topic." For example, I recently dove into Machine Learning. I
-        summarized the concepts in my own words, often drawing them out. I then
-        shared those summarizations in the form of tutorials on this website.
+        Writing about writing code helps us both learn. Here's a few of my
+        articles on Dev.to:
       </p>
-
-      <p>
-        I also write articles on Dev.to and LinkedIn. They feel more "bloggy"
-        than the tutorials that I write here.
-      </p>
-
-      <button>Dev.to</button>
-      <button>LinkedIn</button>
-      <button>RSS</button>
-
-      <h2>Most Popular Articles</h2>
-      <ol>
-        <li>React in 5 Minutes - Dev.to</li>
-        <li>My #100DaysOfCode Experience - Dev.to</li>
-        <li>Docker Cheatsheet - Dev.to</li>
-        <li>Productivity as an Algorithm - Dev.to</li>
-        <li>Why C is still important - Dev.to</li>
-      </ol>
-
-      <h2>Tutorials</h2>
-      <ul class="tree-view">
-        <li>Tutorials</li>
-        <li>
-          <details>
-            <summary>Frontend</summary>
-            <ul>
-              <li>JavaScript</li>
-              <li>React</li>
-            </ul>
-          </details>
-          <details>
-            <summary>Backend</summary>
-            <ul>
-              <li>C</li>
-              <li>NodeJS</li>
-              <li>Python</li>
-            </ul>
-          </details>
-          <details>
-            <summary>Machine Learning</summary>
-            <ul>
-              <li>Docker</li>
-              <li>Kubernetes</li>
-            </ul>
-          </details>
-          <details>
-            <summary>DevOps</summary>
-            <ul>
-              <li>Docker</li>
-              <li>Kubernetes</li>
-            </ul>
-          </details>
-          <details>
-            <summary>Computer Science</summary>
-            <ul>
-              <li>Algorithms</li>
-              <li>Data Structures</li>
-              <li>Operating Systems</li>
-            </ul>
-          </details>
-        </li>
-      </ul>
+      <div style={{ display: 'flex' }}>
+        <button onClick={() => updateSort(true)}>By Date</button>
+        <button onClick={() => updateSort(false)}>By Popularity</button>
+      </div>
+      {loading
+        ? 'Loading...'
+        : data.map((el, i) => <Article key={i} data={el} />)}
     </div>
   );
 }
