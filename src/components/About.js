@@ -1,6 +1,13 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import {
+  FaGithub,
+  FaTwitter,
+  FaLinkedinIn,
+  FaRegEnvelope,
+} from 'react-icons/fa';
+import BackgroundSkills from './children/BackgroundSkills';
 
 function About() {
   const img = useStaticQuery(graphql`
@@ -15,25 +22,84 @@ function About() {
     }
   `);
 
+  console.log(
+    `Hello fellow hackers, check out the Easter egg: https://bit.ly/3i9PByT`
+  );
+
   return (
-    <div style={{ paddingBottom: '3vh' }}>
-      <h1>Hello World, I'm Daniel Curtis</h1>
-      <div className="About">
+    <div className="win-space">
+      <div className="About-top">
         <Img
-          style={{ borderRadius: '10px', marginRight: '10px' }}
+          className="About-img"
           fixed={img.me.childImageSharp.fixed}
+          alt="Daniel Curtis"
         />
-        <div style={{ marginRight: '10px', maxWidth: '700px' }}>
+        <div className="About-top-txt">
+          <h1 style={{ margin: '0' }}>Hello, I'm Curtis!</h1>
           <p>
-            I’m a software engineer passionate about helping others by turning
-            hard problems into 1s and 0s. I'm specifically interested in
-            Full-stack Development (React, Node, C) and Machine Learning
-            (TensorFlow, NumPy). I'll be open to new opportunities in September
-            2020.
+            I’m a software engineer passionate about helping others through
+            solving hard problems. I have two years of professional experience
+            and recently graduated with a bachelors in Computer Science.
           </p>
-          <button>Email Me</button>
+          <div style={{ display: 'flex' }}>
+            <a
+              href="mailto:contactdcurtis@gmail.com"
+              style={{ textDecoration: 'none' }}
+            >
+              <button>
+                <FaRegEnvelope />
+              </button>
+            </a>
+            <a
+              href="https://github.com/danielcurtis"
+              style={{ textDecoration: 'none' }}
+            >
+              <button>
+                <FaGithub />
+              </button>
+            </a>
+            <a
+              href="https://linkedin.com/in/dancurtis"
+              style={{ textDecoration: 'none' }}
+            >
+              <button>
+                <FaLinkedinIn />
+              </button>
+            </a>
+            <a
+              href="https://twitter.com/curtiscodes_"
+              style={{ textDecoration: 'none' }}
+            >
+              <button>
+                <FaTwitter />
+              </button>
+            </a>
+          </div>
         </div>
       </div>
+      <hr />
+      <BackgroundSkills />
+      <hr style={{ margin: '5vh 0' }} />
+      <blockquote style={{ marginBottom: '2vh' }}>
+        "...Daniel was the lead developer for our Student Affairs site
+        migrations and did wonderful interacting with customers and explaining
+        technical matters in an easy-to-understand fashion. He was kind and
+        patient when training new employees and kept a positive mindset with
+        even the most daunting tasks. During my time working with Daniel, I was
+        impressed with his drive, attention to detail, willingness to learn and
+        be a team player, and overall technical expertise..."
+        <br />
+        <footer>— Breanna H., Project Manager</footer>
+      </blockquote>
+      <blockquote>
+        "I highly recommend Daniel. He has helped me with my growing business in
+        several ways to become a local industry leader. He developed my website
+        and built customized payment software. He studied my competitors and
+        gave me suggestions for marketing strategies, SEO ranking, and much
+        more."
+        <br />
+        <footer>— Austin M., Freelance Client</footer>
+      </blockquote>
     </div>
   );
 }
