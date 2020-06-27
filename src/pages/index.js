@@ -27,6 +27,7 @@ function Index() {
         backgroundPosition: 'bottom center',
         backgroundRepeat: 'repeat-y',
         backgroundSize: 'cover',
+        overflow: 'hidden',
       }}
       fluid={imageData}
       backgroundColor={'#040e18'}
@@ -36,7 +37,7 @@ function Index() {
           title="About Me"
           keywords={['software', 'engineer', 'portfolio', 'website']}
         />
-        <div style={{ width: '100vw', height: 'calc(100vh - 25px)' }}>
+        <div style={{ width: '100vw', height: '100vh' }}>
           <IndexRoutes />
         </div>
       </Layout>
