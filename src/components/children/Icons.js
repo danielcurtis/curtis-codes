@@ -26,14 +26,7 @@ function Icons({ setActive }) {
           }
         }
       }
-      eml: file(relativePath: { eq: "eml.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 100, maxHeight: 100) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      lnk: file(relativePath: { eq: "lnk.png" }) {
+      mne: file(relativePath: { eq: "mne.png" }) {
         childImageSharp {
           fluid(maxWidth: 100, maxHeight: 100) {
             ...GatsbyImageSharpFluid
@@ -42,9 +35,14 @@ function Icons({ setActive }) {
       }
     }
   `);
-  const name = ['About Me', 'Articles', 'Projects'];
-  const alts = ['Document icon', 'Directory icon', 'Picture icon'];
-  const path = ['doc', 'dir', 'pic'];
+  const name = ['About Me', 'Articles', 'Projects', 'Minesweeper'];
+  const alts = [
+    'Document icon',
+    'Directory icon',
+    'Picture icon',
+    'Minesweeper icon',
+  ];
+  const path = ['doc', 'dir', 'pic', 'mne'];
 
   return (
     <div className="Icons">
