@@ -15,6 +15,7 @@ function BackgroundSkills() {
           width: '100%',
           fontSize: '14px',
           padding: '10px 20px',
+          WebkitFontSmoothing: 'subpixel-antialiased',
         }}
       >
         <li>
@@ -47,7 +48,12 @@ function BackgroundSkills() {
       </ul>
       <ul
         className="tree-view"
-        style={{ width: '100%', fontSize: '14px', padding: '10px 20px' }}
+        style={{
+          width: '100%',
+          fontSize: '14px',
+          padding: '10px 20px',
+          WebkitFontSmoothing: 'subpixel-antialiased',
+        }}
       >
         <li>
           <h3 style={{ margin: '0' }}>Background</h3>
@@ -58,12 +64,10 @@ function BackgroundSkills() {
               <strong>Education</strong>
             </summary>
             <ul>
-              <li>B.S. Computer Science & Cybersecurity (2020)</li>
-              <li>F.C.C. Full-stack Certification (2020)</li>
-              <li>AWS Development Certification (2020)</li>
+              <li>B.S. Computer Science & Cybersecurity</li>
             </ul>
           </details>
-          <details>
+          <details open>
             <summary>
               <strong>Expierence</strong>
             </summary>
@@ -71,25 +75,35 @@ function BackgroundSkills() {
               <details>
                 <summary>Software Engineer Intern @OhioOIT (2020)</summary>
                 <ul>
-                  <li>Worked with Docker, Angular, & Node</li>
+                  <li>Migrated NodeJS apps to use Docker and Kubernetes</li>
+                  <li>Converted Angular web apps to use Webpack and Docker</li>
                   <li>
-                    Updated university applications to use Docker & Webpack
+                    Implemented mobile-first solutions for Oracle PeopleSoft
+                    apps
                   </li>
                 </ul>
               </details>
               <details>
                 <summary>Frontend Developer Intern @OhioOIT (2019)</summary>
                 <ul>
-                  <li>Worked with JavaScript, Python, & Drupal</li>
-                  <li>Designed and built university websites</li>
-                  <li>Created HTML scrape and cleanup tools</li>
+                  <li>Technical Lead for upgrading outdated websites</li>
+                  <li>
+                    Designed and built university websites and components with
+                    JavaScript and PHP
+                  </li>
+                  <li>
+                    Created developer tools to automate processes with Python
+                  </li>
                 </ul>
               </details>
               <details>
                 <summary>Software Engineer Intern @CBS (2017)</summary>
                 <ul>
-                  <li>Worked with NodeJS, C, & C++</li>
-                  <li>Reviewed software for bugs and readability</li>
+                  <li>
+                    Placed with the advanced research engineering team working
+                    in C, C++, and NodeJS
+                  </li>
+                  <li>Improved software readability and resolved bugs</li>
                   <li>Presented with a full-time offer by the CTO</li>
                 </ul>
               </details>
