@@ -1,5 +1,5 @@
 {
-  "name": "Curtis Codes",
+  "name": "curtis-codes",
   "private": true,
   "description": "Software engineer Daniel Curtis' personal portfolio website",
   "version": "0.1.0",
@@ -27,8 +27,7 @@
   },
   "devDependencies": {
     "eslint": "^6.2.2",
-    "eslint-plugin-react": "^7.11.1",
-    "prettier": "^1.14.2"
+    "eslint-plugin-react": "^7.11.1"
   },
   "homepage": "https://curtiscodes.com",
   "keywords": [
