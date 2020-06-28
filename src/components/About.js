@@ -14,7 +14,7 @@ function About() {
     query {
       me: file(relativePath: { eq: "me.png" }) {
         childImageSharp {
-          fixed(width: 270) {
+          fixed(width: 250) {
             ...GatsbyImageSharpFixed
           }
         }
