@@ -4,7 +4,7 @@ import Article from './children/Article';
 function Articles() {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState();
-  const [sort, setSort] = useState(false);
+  const [sort, setSort] = useState('Popular');
 
   useEffect(() => {
     fetch('https://dev.to/api/articles?username=curtiscodes')
@@ -21,12 +21,12 @@ function Articles() {
       );
   }, []);
 
-  const sortData = () => {
-    if (sort) {
+  const sortData = (val) => {
+    if (val === 'Popular') {
       data.sort((a, b) =>
         a.public_reactions_count > b.public_reactions_count ? 1 : -1
       );
-    } else {
+    } else if (val === 'Date') {
       data.sort((a, b) => (a.edited_at > b.edited_at ? 1 : -1));
     }
   };
@@ -45,8 +45,8 @@ function Articles() {
         articles on Dev.to:
       </p>
       <div style={{ display: 'flex' }}>
-        <button onClick={() => updateSort(true)}>By Date</button>
-        <button onClick={() => updateSort(false)}>By Popularity</button>
+        <button onClick={() => updateSort('Date')}>By Date</button>
+        <button onClick={() => updateSort('Popular')}>By Popularity</button>
       </div>
       {loading
         ? 'Loading...'
