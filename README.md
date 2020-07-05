@@ -2,10 +2,10 @@
 
 My personal portfolio designed after Windows 98.
 
-https://github.com/danielcurtis/curtis-codes/workflows/development/badge.svg
-https://github.com/danielcurtis/curtis-codes/workflows/staging/badge.svg
-https://github.com/danielcurtis/curtis-codes/workflows/test/badge.svg
-https://github.com/danielcurtis/curtis-codes/workflows/production/badge.svg
+![](https://github.com/danielcurtis/curtis-codes/workflows/Development/badge.svg)
+![](https://github.com/danielcurtis/curtis-codes/workflows/Staging/badge.svg)
+![](https://github.com/danielcurtis/curtis-codes/workflows/Test/badge.svg)
+![](https://github.com/danielcurtis/curtis-codes/workflows/Production/badge.svg)
 
 ## Local Development
 
