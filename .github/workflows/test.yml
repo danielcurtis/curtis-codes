@@ -19,9 +19,9 @@ jobs:
           node-version: 12.x
 
       - name: Cypress run
-        uses: cypress-io/github-action@v1
+        uses: cypress-io/github-action@v2
         with:
           build: npm run build
-          start: npm start
+          start: npm run dev
           wait-on: http://localhost:3000
           browser: chrome
