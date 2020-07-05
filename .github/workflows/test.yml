@@ -13,15 +13,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v1
 
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v1
         with:
           build: npm run build
           start: npm run dev
-          wait-on: http://localhost:3000
-          browser: chrome
+          wait-on: http://localhost:8000
