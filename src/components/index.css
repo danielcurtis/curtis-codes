@@ -6,23 +6,28 @@ body {
   margin: 0;
   -webkit-font-smoothing: subpixel-antialiased;
 }
+
 p,
 ul,
 li {
   line-height: 1.5 !important;
 }
+
 h1 {
   font-size: calc(2vw + 20px);
   margin-bottom: 0;
 }
+
 blockquote {
   background-color: #d3d3d3;
   padding: 1rem 2rem;
   margin: 0;
 }
+
 blockquote footer {
   margin: 12px 0 0 12px;
 }
+
 button {
   font-size: large !important;
   cursor: pointer;
@@ -37,18 +42,23 @@ button {
 .title-bar {
   display: flex;
 }
+
 .title-bar-text {
   width: 100%;
 }
+
 .title-bar-controls {
   width: 20px;
 }
+
 .flex-break {
   display: flex;
 }
+
 .win-space {
   padding: 3vh 8vw;
 }
+
 .main-win {
   max-width: 960px;
   z-index: 1;
@@ -58,14 +68,72 @@ button {
   position: absolute;
   margin: auto;
 }
+
 .mine-win {
-  width: 288px;
+  width: 230px;
   z-index: 1;
   left: 0;
   right: 0;
   top: 5vh;
   position: absolute;
   margin: auto;
+}
+
+/* Minesweeper */
+.mine-field {
+  margin: 5px;
+  padding: 3px;
+  box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+  width: 200px;
+  display: grid;
+  grid-template-columns: repeat(8, 25px);
+  grid-template-rows: repeat(8, 25px);
+}
+
+.mine {
+  cursor: pointer;
+  padding: 0.02px;
+}
+
+.mine-revealed {
+  font-weight: 800;
+  box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
+
+/* Minesweeper - Mine.js */
+.Mine-img {
+  width: 23px;
+  height: 23px;
+}
+
+/* Minesweeper - Heading.js */
+.Heading {
+  width: 202px;
+  display: flex;
+  margin: 5px;
+  padding: 2px;
+  box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
+    inset -2px -2px #dfdfdf, inset 2px 2px #808080;
+}
+
+/* Minesweeper - Score.js */
+.Score {
+  display: flex;
+}
+
+.Score-img {
+  width: 22px;
+  height: 35px;
+}
+
+/* Minesweeper - Smiley.js */
+.Smiley-img {
+  width: 35px;
+  height: 35px;
+  margin-left: 40px;
+  cursor: pointer;
 }
 
 /* About.js */
@@ -75,10 +143,12 @@ button {
   justify-content: space-between;
   align-items: center;
 }
+
 .About-top-txt {
   margin-right: 15px;
   max-width: 850px;
 }
+
 .About-img {
   margin: 0 3vw 0 0;
   max-height: 200px;
@@ -92,6 +162,7 @@ button {
 .Article-h2 {
   font-size: larger;
 }
+
 .Article-title {
   display: flex;
   align-items: center;
@@ -126,6 +197,7 @@ button {
   margin: 0;
   font-family: 'Pixelated MS Sans Serif', Arial;
 }
+
 .Project-h2 {
   font-size: 18px;
   padding-left: 22px;
@@ -143,9 +215,11 @@ button {
   .flex-break {
     flex-direction: column;
   }
+
   .tree-view {
     width: 65vw !important;
   }
+
   .About-img {
     margin: auto 10px 30px auto;
     max-height: 250px;
