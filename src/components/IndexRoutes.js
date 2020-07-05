@@ -5,11 +5,11 @@ import './index.css';
 import About from './About';
 import Articles from './Articles';
 import Projects from './Projects';
-import Minesweeper from './Minesweeper';
+import Minesweeper from '../minesweeper/index.js';
 import Icons from './children/Icons';
 
 function IndexRoutes() {
-  const [active, setActive] = useState('Articles');
+  const [active, setActive] = useState('Minesweeper');
   let component;
 
   if (active === 'About Me') component = <About />;
@@ -27,17 +27,17 @@ function IndexRoutes() {
               active === 'Minesweeper' ? 'mine-win' : 'main-win'
             }`}
           >
-            <div className="title-bar">
-              <strong>
+            <strong>
+              <div className="title-bar">
                 <div className="title-bar-text">{active}</div>
-              </strong>
-              <div className="title-bar-controls">
-                <button
-                  aria-label="Close"
-                  onClick={() => setActive(null)}
-                ></button>
+                <div className="title-bar-controls">
+                  <button
+                    aria-label="Close"
+                    onClick={() => setActive(null)}
+                  ></button>
+                </div>
               </div>
-            </div>
+            </strong>
             <div
               className="window-body"
               style={{
@@ -46,8 +46,8 @@ function IndexRoutes() {
                 WebkitFontSmoothing: 'auto',
                 maxHeight: '80vh',
                 overflowY: 'scroll',
-                margin: '0 0 0 10px',
-                paddingBottom: '15px',
+                overflowX: 'hidden',
+                margin: '0',
               }}
             >
               {component}
