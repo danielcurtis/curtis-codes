@@ -1,18 +1,34 @@
-# Curtis-Codes
+# Curtis Codes dot com
 
-My personal portfolio designed after Windows 98 - the year I was born :D
+My personal portfolio designed after Windows 98.
 
-I built this website with Gatsby with the hope of turning it into a full-fledged blog one day. I also use React (of course), GraphQL, and 98.css.
-
-The website is hosted using a CI/CD pipeline using Netlify and GitHub Actions.
-
-## License
-
-I would love to make this website open source. However, I use an API for my articles which would create security issues.
+![](https://github.com/danielcurtis/curtis-codes/workflows/Development/badge.svg)
+![](https://github.com/danielcurtis/curtis-codes/workflows/Staging/badge.svg)
+![](https://github.com/danielcurtis/curtis-codes/workflows/Test/badge.svg)
+![](https://github.com/danielcurtis/curtis-codes/workflows/Production/badge.svg)
 
 ## Local Development
 
-1. Clone the repo
-2. Run `npm i`
-3. Develop by running `gastby develop`
-4. Build by running `gatsby build`
+1. Create a feature branch
+2. Clone the repo `git clone https://github.com/danielcurtis/curtis-codes.git`
+3. Run `npm i`
+4. Develop by running `gastby develop`
+5. Build by running `gatsby build`
+6. Create a pull request to merge into dev
+
+## Technologies
+
+- Gatsby
+- React (Hooks)
+- GraphQL
+- 98.css
+
+## Pipeline
+
+- GitHub Actions (CI)
+- Cypress (Testing)
+- Netlify (CD)
+
+## License
+
+I'm keeping this repo private for now.
