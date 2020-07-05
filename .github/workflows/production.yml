@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: Deploy
+=======
+name: Production
+>>>>>>> 3d5ef6a18b1080ac1ad252f848d78e00051b514f
 
 on:
   push:
@@ -15,8 +19,15 @@ jobs:
         node-version: [12.x]
 
     steps:
+<<<<<<< HEAD
       - uses: actions/checkout@v1
       - name: Use Node.js ${{ matrix.node-version }}
+=======
+      - name: Checkout code
+        uses: actions/checkout@v1
+
+      - name: Use Node.js 12.x
+>>>>>>> 3d5ef6a18b1080ac1ad252f848d78e00051b514f
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
@@ -29,6 +40,10 @@ jobs:
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
         with:
+<<<<<<< HEAD
           args: deploy --site ${{ secrets.NETLIFY_SITE_ID }} --auth ${{ secrets.NETLIFY_AUTH_TOKEN }} --prod --dir=public
         env:
           CD: true
+=======
+          args: deploy --dir=build --prod
+>>>>>>> 3d5ef6a18b1080ac1ad252f848d78e00051b514f
