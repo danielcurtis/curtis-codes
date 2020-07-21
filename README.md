@@ -1,34 +1,34 @@
 # Curtis Codes dot com
 
-My personal portfolio designed after Windows 98.
+My personal portfolio designed after Windows 98 built using Gatsby.
 
-![](https://github.com/danielcurtis/curtis-codes/workflows/Development/badge.svg)
-![](https://github.com/danielcurtis/curtis-codes/workflows/Staging/badge.svg)
-![](https://github.com/danielcurtis/curtis-codes/workflows/Test/badge.svg)
-![](https://github.com/danielcurtis/curtis-codes/workflows/Production/badge.svg)
+![Tests](https://github.com/danielcurtis/curtis-codes/workflows/Test/badge.svg?branch=dev)
 
+## Prerequisites
+
+- [NodeJS](https://nodejs.org/en/download/)
+- [Gatsby CLI](https://www.gatsbyjs.org/tutorial/part-zero/)
+  
 ## Local Development
 
-1. Create a feature branch
-2. Clone the repo `git clone https://github.com/danielcurtis/curtis-codes.git`
-3. Run `npm i`
-4. Develop by running `gastby develop`
-5. Build by running `gatsby build`
+1. Clone the repo `git clone https://github.com/danielcurtis/curtis-codes.git`
+2. Switch to the dev branch `git checkout dev`
+3. Run `npm install`
+4. Start the dev server `gastby develop`
+5. Build the website `gatsby build`
 6. Create a pull request to merge into dev
 
-## Technologies
+## Author & Acknowledgements
 
-- Gatsby
-- React (Hooks)
-- GraphQL
-- 98.css
+#### Author
 
-## Pipeline
+- Daniel Curtis - [@codescurtis](https://twitter.com/codescurtis) [CurtisCodes.com](https://curtiscodes.com)
 
-- GitHub Actions (CI)
-- Cypress (Testing)
-- Netlify (CD)
+#### Acknowledgements
+
+- [98.css](https://jdan.github.io/98.css/)
+- [Windows 98 Icons](https://win98icons.alexmeub.com/)
 
 ## License
 
-I'm keeping this repo private for now.
+[MIT](https://github.com/danielcurtis/curtis-codes/main/LICENSE)
