@@ -3,12 +3,12 @@ import Heading from './Heading';
 import Minefield from './Minefield';
 
 function Game() {
-  return (
-    <>
-      <Heading />
-      <Minefield />
-    </>
-  );
+	return (
+		<>
+			<Heading />
+			<Minefield />
+		</>
+	);
 }
 
 export default Game;
