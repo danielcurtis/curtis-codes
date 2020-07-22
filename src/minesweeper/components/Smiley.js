@@ -49,30 +49,35 @@ function Smiley() {
 
 	if (gameover) {
 		return (
-			<Img
-				className="Smiley-img"
-				fluid={images['dead'].childImageSharp.fluid}
-				alt={'dead face'}
-				onClick={resetGame}
-			/>
+			<div onClick={resetGame} onKeyDown={resetGame} role="button">
+				<Img
+					className="Smiley-img"
+					fluid={images['dead'].childImageSharp.fluid}
+					alt={'dead face'}
+				/>
+			</div>
 		);
 	} else if (win) {
 		return (
-			<Img
-				className="Smiley-img"
-				fluid={images['sunglasses'].childImageSharp.fluid}
-				alt={'sunglasses face'}
-				onClick={resetGame}
-			/>
+			<div onClick={resetGame} onKeyDown={resetGame} role="button">
+				<Img
+					className="Smiley-img"
+					fluid={images['sunglasses'].childImageSharp.fluid}
+					alt={'sunglasses face'}
+					onClick={resetGame}
+				/>
+			</div>
 		);
 	} else {
 		return (
-			<Img
-				className="Smiley-img"
-				fluid={images['smile'].childImageSharp.fluid}
-				alt={'smiley face'}
-				onClick={resetGame}
-			/>
+			<div onClick={resetGame} onKeyDown={resetGame} role="button">
+				<Img
+					className="Smiley-img"
+					fluid={images['smile'].childImageSharp.fluid}
+					alt={'smiley face'}
+					onClick={resetGame}
+				/>
+			</div>
 		);
 	}
 }

@@ -51,7 +51,7 @@ function Icons({ setActive }) {
 					<div
 						key={i}
 						id={el}
-						tabindex={i + 1}
+						tabIndex={i + 1}
 						role="button"
 						onClick={() => setActive(el)}
 						onKeyDown={() => setActive(el)}
