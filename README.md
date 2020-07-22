@@ -2,7 +2,7 @@
 
 My personal portfolio designed after Windows 98 built using Gatsby.
 
-![Tests](https://github.com/danielcurtis/curtis-codes/workflows/Test/badge.svg?branch=dev)
+![Test workflow](https://github.com/danielcurtis/curtis-codes/workflows/Test%20workflow/badge.svg)
 
 ## Prerequisites
 
@@ -12,7 +12,7 @@ My personal portfolio designed after Windows 98 built using Gatsby.
 ## Local Development
 
 1. Clone the repo `git clone https://github.com/danielcurtis/curtis-codes.git`
-2. Switch to the dev branch `git checkout dev`
+2. Create a new development branch `get checkout -b dev`
 3. Run `npm install`
 4. Start the dev server `gastby develop`
 5. Build the website `gatsby build`
