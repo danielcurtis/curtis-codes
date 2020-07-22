@@ -62,9 +62,20 @@ export const unrevealedCountEqualsBombCount = (minefield) => {
 const genBombs = (minefield) => {
 	const getRandomInt = (max) => Math.floor(Math.random() * Math.floor(max));
 
+	const currSets = new Set();
+
 	for (let i = 0; i < 10; i++) {
 		let x = getRandomInt(7);
 		let y = getRandomInt(7);
+
+		// Ensure no duplicates
+		while (currSets.has(x + y)) {
+			x = getRandomInt(7);
+			y = getRandomInt(7);
+		}
+
+		currSets.add(x + y);
+
 		let mine = minefield.find((m) => m.y === y && m.x === x);
 
 		if (!mine.bomb) mine.bomb = true;
