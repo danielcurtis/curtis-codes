@@ -2,8 +2,6 @@
 
 My personal portfolio designed after Windows 98 built using Gatsby.
 
-![Test workflow](https://github.com/danielcurtis/curtis-codes/workflows/Test%20workflow/badge.svg)
-
 ## Prerequisites
 
 - [NodeJS](https://nodejs.org/en/download/)

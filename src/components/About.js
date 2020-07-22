@@ -66,7 +66,7 @@ function About() {
 							</button>
 						</a>
 						<a
-							href="https://twitter.com/curtiscodes_"
+							href="https://twitter.com/codescurtis"
 							style={{ textDecoration: 'none' }}>
 							<button>
 								<FaTwitter />
