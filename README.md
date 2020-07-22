@@ -2,7 +2,7 @@
 
 My personal portfolio designed after Windows 98 built using Gatsby.
 
-![Tests](https://github.com/danielcurtis/curtis-codes/workflows/Test/badge.svg?branch=dev)
+![Test workflow](https://github.com/danielcurtis/curtis-codes/workflows/Test%20workflow/badge.svg)
 
 ## Prerequisites
 
