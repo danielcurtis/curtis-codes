@@ -9,7 +9,7 @@ import Minesweeper from '../minesweeper/index.js';
 import Icons from './children/Icons';
 
 function IndexRoutes() {
-	const [active, setActive] = useState('Minesweeper');
+	const [active, setActive] = useState('About Me');
 	let component;
 
 	if (active === 'About Me') component = <About />;
@@ -26,16 +26,23 @@ function IndexRoutes() {
 						className={`window ${
 							active === 'Minesweeper' ? 'mine-win' : 'main-win'
 						}`}>
-						<strong>
-							<div className="title-bar">
+						<div className="title-bar">
+							<strong style={{ display: 'flex' }}>
 								<div className="title-bar-text">{active}</div>
-								<div className="title-bar-controls">
-									<button
-										aria-label="Close"
-										onClick={() => setActive(null)}></button>
-								</div>
+								<div
+									className={
+										active === 'Minesweeper'
+											? 'title-bar-mini-spacer'
+											: 'title-bar-spacer'
+									}
+								/>
+							</strong>
+							<div className="title-bar-controls">
+								<button
+									aria-label="Close"
+									onClick={() => setActive(null)}></button>
 							</div>
-						</strong>
+						</div>
 						<div
 							className="window-body"
 							style={{

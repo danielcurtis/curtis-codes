@@ -47,6 +47,16 @@ button {
 	width: 100%;
 }
 
+.title-bar-spacer {
+	width: 50vw;
+	max-width: 720px;
+}
+
+.title-bar-mini-spacer {
+	width: 50vw;
+	max-width: 50px;
+}
+
 .title-bar-controls {
 	width: 20px;
 }
@@ -146,12 +156,12 @@ button {
 
 .About-top-txt {
 	margin-right: 15px;
-	max-width: 850px;
+	max-width: 450px;
 }
 
 .About-img {
 	margin: 0 3vw 0 0;
-	max-height: 200px;
+	max-height: 270px;
 	border-left: 2px solid white;
 	border-top: 2px solid white;
 	border-right: 3px solid black;
@@ -161,6 +171,7 @@ button {
 /* Articles.js */
 .Article-h2 {
 	font-size: larger;
+	font-family: 'Pixelated MS Sans Serif', Arial;
 }
 
 .Article-title {
@@ -221,7 +232,7 @@ button {
 	}
 
 	.About-img {
-		margin: auto 10px 30px auto;
+		margin: auto auto 30px auto;
 		max-height: 250px;
 	}
 }
