@@ -37,9 +37,11 @@ function About() {
 				<div className="About-top-txt">
 					<h1 style={{ margin: '0' }}>Hello, I'm Curtis!</h1>
 					<p>
-						I’m a software engineer passionate about helping others through
-						solving hard problems. I have two years of professional experience
-						and recently graduated with a bachelors in Computer Science.
+						I’m passionate about building a better tomorrow by solving today’s
+						hard problems through software engineering. I have two years of
+						professional experience and recently graduated with a bachelors in
+						Computer Science. I'm currently searching for new opportunities
+						involving JavaScript, Python, or C.
 					</p>
 					<div style={{ display: 'flex' }}>
 						<a
@@ -85,7 +87,7 @@ function About() {
 				impressed with his drive, attention to detail, willingness to learn and
 				be a team player, and overall technical expertise..."
 				<br />
-				<footer>— Breanna H., Project Manager</footer>
+				<footer>— Breanna, Project Manager</footer>
 			</blockquote>
 			<blockquote>
 				"I highly recommend Daniel. He has helped me with my growing business in
@@ -94,7 +96,7 @@ function About() {
 				gave me suggestions for marketing strategies, SEO ranking, and much
 				more."
 				<br />
-				<footer>— Austin M., Freelance Client</footer>
+				<footer>— Austin, Freelance Client</footer>
 			</blockquote>
 		</div>
 	);

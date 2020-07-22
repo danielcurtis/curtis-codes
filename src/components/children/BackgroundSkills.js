@@ -26,8 +26,8 @@ function BackgroundSkills() {
 						</summary>
 						<ul>
 							<li>JavaScript (React, DOM, Node)</li>
+							<li>Python (TensorFlow)</li>
 							<li>C/C++</li>
-							<li>Python (NumPy, TensorFlow)</li>
 						</ul>
 					</details>
 					<details>
@@ -35,10 +35,9 @@ function BackgroundSkills() {
 							<strong>Tools</strong>
 						</summary>
 						<ul>
+							<li>MongoDB</li>
 							<li>Docker</li>
 							<li>Kubernetes</li>
-							<li>Postman</li>
-							<li>Jira</li>
 							<li>Git</li>
 						</ul>
 					</details>
@@ -61,7 +60,8 @@ function BackgroundSkills() {
 							<strong>Education</strong>
 						</summary>
 						<ul>
-							<li>B.S. Computer Science & Cybersecurity</li>
+							<li>B.S. Computer Science - 3.64 GPA</li>
+							<li>TensorFlow Specialization - DeepLearnig.ai</li>
 						</ul>
 					</details>
 					<details open>
@@ -98,7 +98,7 @@ function BackgroundSkills() {
 								<ul>
 									<li>
 										Placed with the advanced research engineering team working
-										in C, C++, and NodeJS
+										in C and C++
 									</li>
 									<li>Improved software readability and resolved bugs</li>
 									<li>Presented with a full-time offer by the CTO</li>
