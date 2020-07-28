@@ -62,6 +62,12 @@ function Projects() {
 			{data.map((el, i) => (
 				<Project key={i} name={el.name} link={el.link} desc={el.desc} />
 			))}
+			<p>
+				My portfolio project was built using Gatsby (a React library). I also
+				used <a href="https://jdan.github.io/98.css/">98.css</a> and{' '}
+				<a href="https://win98icons.alexmeub.com/">win98icons</a>, two awesome,
+				retro resources!
+			</p>
 		</div>
 	);
 }

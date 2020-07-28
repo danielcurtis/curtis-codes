@@ -40,8 +40,8 @@ function About() {
 						I’m passionate about building a better tomorrow by solving today’s
 						hard problems through software engineering. I have two years of
 						professional experience and recently graduated with a bachelors in
-						Computer Science. I'm currently searching for new opportunities
-						involving JavaScript, Python, or C.
+						Computer Science. I'm currently searching for new opportunities in
+						the Denver area.
 					</p>
 					<div style={{ display: 'flex' }}>
 						<a
@@ -58,6 +58,7 @@ function About() {
 								<FaGithub />
 							</button>
 						</a>
+						{/*
 						<a
 							href="https://linkedin.com/in/dancurtis"
 							style={{ textDecoration: 'none' }}>
@@ -65,6 +66,7 @@ function About() {
 								<FaLinkedinIn />
 							</button>
 						</a>
+						*/}
 						<a
 							href="https://twitter.com/codescurtis"
 							style={{ textDecoration: 'none' }}>
