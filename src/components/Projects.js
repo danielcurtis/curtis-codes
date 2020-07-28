@@ -32,23 +32,23 @@ function Projects() {
 				'Built-in memory management and garbage collection',
 			],
 		},
-		{
-			name: 'Stonk Advisor - Predictive stock forcasting with deep learning',
-			link: 'https://stonkadvisor.com',
-			desc: [
-				'Time series forecasting based on historical stock data',
-				'Daily trend predicting with natural language processing and sentiment analysis',
-				'Deep learning models created in Python with TensorFlow, NumPy, and Pandas',
-				'Web app built with React, Docker, and Kubernetes on AWS',
-			],
-		},
+		// {
+		// 	name: 'Stonk Advisor - Predictive stock forcasting with deep learning',
+		// 	link: 'https://stonkadvisor.com',
+		// 	desc: [
+		// 		'Time series forecasting based on historical stock data',
+		// 		'Daily trend predicting with natural language processing and sentiment analysis',
+		// 		'Deep learning models created in Python with TensorFlow, NumPy, and Pandas',
+		// 		'Web app built with React, Docker, and Kubernetes on AWS',
+		// 	],
+		// },
 		{
 			name: 'Taskaholic - Personal time tracking and project management',
 			link: 'https://taskaholic.com',
 			desc: [
-				'Frontend built with React and TailwindCSS',
-				'Backend built with NodeJS and MongoDB',
-				'CI/CD Pipeline uses Docker and Kubernetes on AWS',
+				'Frontend built with React',
+				'Backend built with NodeJS, Express and MongoDB',
+				'CI/CD Pipeline built with Docker, Travis CI and Google Kubernetes Engine',
 			],
 		},
 	];
@@ -59,14 +59,15 @@ function Projects() {
 			<p>
 				I'm always hacking away on side projects. Here's a few of my favorites:
 			</p>
+
 			{data.map((el, i) => (
 				<Project key={i} name={el.name} link={el.link} desc={el.desc} />
 			))}
+
 			<p>
-				My portfolio project was built using Gatsby (a React library). I also
-				used <a href="https://jdan.github.io/98.css/">98.css</a> and{' '}
-				<a href="https://win98icons.alexmeub.com/">win98icons</a>, two awesome,
-				retro resources!
+				My portfolio project was built using Gatsby. I also used two retro UI
+				resources: <a href="https://jdan.github.io/98.css/">98.css</a> and{' '}
+				<a href="https://win98icons.alexmeub.com/">win98icons</a>.
 			</p>
 		</div>
 	);

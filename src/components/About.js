@@ -37,11 +37,10 @@ function About() {
 				<div className="About-top-txt">
 					<h1 style={{ margin: '0' }}>Hello, I'm Curtis!</h1>
 					<p>
-						I’m passionate about building a better tomorrow by solving today’s
-						hard problems through software engineering. I have two years of
-						professional experience and recently graduated with a bachelors in
-						Computer Science. I'm currently searching for new opportunities in
-						the Denver area.
+						I’m passionate about solving today’s hard problems through software
+						engineering. I have two years of professional experience and
+						recently graduated with a B.S. in Computer Science. I'm currently
+						searching for new opportunities in the Denver area.
 					</p>
 					<div style={{ display: 'flex' }}>
 						<a
