@@ -33,7 +33,7 @@ function Index() {
 			backgroundColor={'#040e18'}>
 			<Layout>
 				<SEO
-					title="About Me"
+					title="Software Engineer Daniel Curtis"
 					keywords={['software', 'engineer', 'portfolio', 'website']}
 				/>
 				<div style={{ width: '100vw', height: '100vh' }}>
