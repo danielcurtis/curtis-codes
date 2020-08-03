@@ -20,7 +20,7 @@ My personal portfolio designed after Windows 98 built using Gatsby.
 
 #### Author
 
-- Daniel Curtis - [@codescurtis](https://twitter.com/codescurtis) [CurtisCodes.com](https://curtiscodes.com)
+- Dan Curtis - [@codescurtis](https://twitter.com/codescurtis) [CurtisCodes.com](https://curtiscodes.com)
 
 #### Acknowledgements
 

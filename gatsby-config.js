@@ -5,8 +5,8 @@ require('dotenv').config({
 module.exports = {
 	siteMetadata: {
 		title: `CurtisCodes.com`,
-		author: `Daniel Curtis`,
-		description: `Daniel Curtis is a software engineer passionate about coding, learning, and building.`,
+		author: `Dan Curtis`,
+		description: `Dan Curtis is a software engineer passionate about coding, learning, and building.`,
 		siteUrl: `https://curtiscodes.com/`,
 	},
 	plugins: [

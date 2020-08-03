@@ -32,7 +32,7 @@ function About() {
 				<Img
 					className="About-img"
 					fixed={img.me.childImageSharp.fixed}
-					alt="Daniel Curtis"
+					alt="Dan Curtis"
 				/>
 				<div className="About-top-txt">
 					<h1 style={{ margin: '0' }}>Hello, I'm Curtis!</h1>

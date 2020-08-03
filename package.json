@@ -1,50 +1,50 @@
 {
-  "name": "curtis-codes",
-  "private": true,
-  "description": "Software engineer Daniel Curtis' personal portfolio website",
-  "version": "0.1.0",
-  "author": "Daniel Curtis <contactdcurtis@gmail.com>",
-  "dependencies": {
-    "98.css": "^0.1.11",
-    "gatsby": "^2.14.4",
-    "gatsby-background-image": "^1.1.1",
-    "gatsby-image": "^2.2.40",
-    "gatsby-plugin-google-analytics": "^2.0.5",
-    "gatsby-plugin-manifest": "^2.0.5",
-    "gatsby-plugin-offline": "^2.0.5",
-    "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-plugin-sharp": "^2.4.5",
-    "gatsby-plugin-sitemap": "^2.2.27",
-    "gatsby-remark-images": "^3.1.19",
-    "gatsby-source-filesystem": "^2.0.2",
-    "gatsby-transformer-remark": "^2.1.6",
-    "gatsby-transformer-sharp": "^2.3.14",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-draggable": "^4.4.3",
-    "react-helmet": "^5.2.0",
-    "react-icons": "^3.10.0"
-  },
-  "devDependencies": {
-    "eslint": "^6.2.2",
-    "eslint-plugin-react": "^7.11.1"
-  },
-  "homepage": "https://curtiscodes.com",
-  "keywords": [
-    "portfolio",
-    "gatsby",
-    "react"
-  ],
-  "license": "",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/danielcurtis/curtis-codes"
-  },
-  "scripts": {
-    "dev": "gatsby develop",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "start": "npm run develop",
-    "build": "gatsby build"
-  }
+	"name": "curtis-codes",
+	"private": true,
+	"description": "Software engineer Dan Curtis' personal portfolio website",
+	"version": "0.1.0",
+	"author": "Dan Curtis <contactdcurtis@gmail.com>",
+	"dependencies": {
+		"98.css": "^0.1.11",
+		"gatsby": "^2.14.4",
+		"gatsby-background-image": "^1.1.1",
+		"gatsby-image": "^2.2.40",
+		"gatsby-plugin-google-analytics": "^2.0.5",
+		"gatsby-plugin-manifest": "^2.0.5",
+		"gatsby-plugin-offline": "^2.0.5",
+		"gatsby-plugin-react-helmet": "^3.0.0",
+		"gatsby-plugin-sharp": "^2.4.5",
+		"gatsby-plugin-sitemap": "^2.2.27",
+		"gatsby-remark-images": "^3.1.19",
+		"gatsby-source-filesystem": "^2.0.2",
+		"gatsby-transformer-remark": "^2.1.6",
+		"gatsby-transformer-sharp": "^2.3.14",
+		"react": "^16.5.1",
+		"react-dom": "^16.5.1",
+		"react-draggable": "^4.4.3",
+		"react-helmet": "^5.2.0",
+		"react-icons": "^3.10.0"
+	},
+	"devDependencies": {
+		"eslint": "^6.2.2",
+		"eslint-plugin-react": "^7.11.1"
+	},
+	"homepage": "https://curtiscodes.com",
+	"keywords": [
+		"portfolio",
+		"gatsby",
+		"react"
+	],
+	"license": "",
+	"main": "n/a",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/danielcurtis/curtis-codes"
+	},
+	"scripts": {
+		"dev": "gatsby develop",
+		"test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
+		"start": "npm run develop",
+		"build": "gatsby build"
+	}
 }
