@@ -19,6 +19,10 @@ function Index() {
 	`);
 	const imageData = data.desktop.childImageSharp.fluid;
 
+	console.log(
+		'Hello fellow hackers, check out the Easter egg: https://bit.ly/3i9PByT'
+	);
+
 	return (
 		<BackgroundImage
 			Tag="section"

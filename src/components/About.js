@@ -22,10 +22,6 @@ function About() {
 		}
 	`);
 
-	console.log(
-		`Hello fellow hackers, check out the Easter egg: https://bit.ly/3i9PByT`
-	);
-
 	return (
 		<div className="win-space">
 			<div className="About-top">
@@ -35,12 +31,11 @@ function About() {
 					alt="Dan Curtis"
 				/>
 				<div className="About-top-txt">
-					<h1 style={{ margin: '0' }}>Hello, I'm Curtis!</h1>
+					<h1 style={{ margin: '0' }}>Hi there 👋</h1>
 					<p>
-						I’m passionate about solving today’s hard problems through software
-						engineering. I have two years of professional experience and
-						recently graduated with a B.S. in Computer Science. I'm currently
-						searching for new opportunities in the Denver area.
+						I'm an enthusiastic software engineer with 2+ years of hands-on
+						experience with C and JavaScript/Node/React interested in machine
+						learning. Full-stack specialist.
 					</p>
 					<div style={{ display: 'flex' }}>
 						<a
@@ -57,7 +52,6 @@ function About() {
 								<FaGithub />
 							</button>
 						</a>
-						{/*
 						<a
 							href="https://linkedin.com/in/dancurtis"
 							style={{ textDecoration: 'none' }}>
@@ -65,7 +59,6 @@ function About() {
 								<FaLinkedinIn />
 							</button>
 						</a>
-						*/}
 						<a
 							href="https://twitter.com/codescurtis"
 							style={{ textDecoration: 'none' }}>
@@ -76,9 +69,13 @@ function About() {
 					</div>
 				</div>
 			</div>
+
 			<hr />
+
 			<BackgroundSkills />
+
 			<hr style={{ margin: '5vh 0' }} />
+
 			<blockquote style={{ marginBottom: '2vh' }}>
 				"...Daniel was the lead developer for our Student Affairs site
 				migrations and did wonderful interacting with customers and explaining
