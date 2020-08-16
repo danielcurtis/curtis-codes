@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import Article from './children/Article';
+
+import Article from './Article';
 
 function Articles() {
 	const [loading, setLoading] = useState(true);

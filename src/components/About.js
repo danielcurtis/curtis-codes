@@ -7,7 +7,8 @@ import {
 	FaLinkedinIn,
 	FaRegEnvelope,
 } from 'react-icons/fa';
-import BackgroundSkills from './children/BackgroundSkills';
+
+import Background from './Background';
 
 function About() {
 	const img = useStaticQuery(graphql`
@@ -31,37 +32,29 @@ function About() {
 					alt="Dan Curtis"
 				/>
 				<div className="About-top-txt">
-					<h1 style={{ margin: '0' }}>Hi there 👋</h1>
+					<h1 className="About-h1">Hi there 👋</h1>
 					<p>
 						I'm an enthusiastic software engineer with 2+ years of hands-on
 						experience with C and JavaScript/Node/React interested in machine
 						learning. Full-stack specialist.
 					</p>
-					<div style={{ display: 'flex' }}>
-						<a
-							href="mailto:contactdcurtis@gmail.com"
-							style={{ textDecoration: 'none' }}>
+					<div className="flex">
+						<a href="mailto:contactdcurtis@gmail.com" className="no-decor">
 							<button>
 								<FaRegEnvelope />
 							</button>
 						</a>
-						<a
-							href="https://github.com/danielcurtis"
-							style={{ textDecoration: 'none' }}>
+						<a href="https://github.com/danielcurtis" className="no-decor">
 							<button>
 								<FaGithub />
 							</button>
 						</a>
-						<a
-							href="https://linkedin.com/in/dancurtis"
-							style={{ textDecoration: 'none' }}>
+						<a href="https://linkedin.com/in/dancurtis" className="no-decor">
 							<button>
 								<FaLinkedinIn />
 							</button>
 						</a>
-						<a
-							href="https://twitter.com/codescurtis"
-							style={{ textDecoration: 'none' }}>
+						<a href="https://twitter.com/codescurtis" className="no-decor">
 							<button>
 								<FaTwitter />
 							</button>
@@ -72,11 +65,11 @@ function About() {
 
 			<hr />
 
-			<BackgroundSkills />
+			<Background />
 
-			<hr style={{ margin: '5vh 0' }} />
+			<hr className="About-hr" />
 
-			<blockquote style={{ marginBottom: '2vh' }}>
+			<blockquote className="About-blockquote">
 				"...Daniel was the lead developer for our Student Affairs site
 				migrations and did wonderful interacting with customers and explaining
 				technical matters in an easy-to-understand fashion. He was kind and

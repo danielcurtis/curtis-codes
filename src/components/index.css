@@ -39,6 +39,14 @@ button {
 }
 
 /* Global Classes */
+.no-decor {
+	text-decoration: none;
+}
+
+.flex {
+	display: flex;
+}
+
 .title-bar {
 	display: flex;
 }
@@ -106,7 +114,7 @@ button {
 	padding: 0.02px;
 }
 
-.mine-revealed {
+.mine-shown {
 	font-weight: 800;
 	box-shadow: inset -1px -1px #ffffff, inset 1px 1px #0a0a0a,
 		inset -2px -2px #dfdfdf, inset 2px 2px #808080;
@@ -159,6 +167,18 @@ button {
 	max-width: 450px;
 }
 
+.About-h1 {
+	margin: 0;
+}
+
+.About-hr {
+	margin: 5vh 0;
+}
+
+.About-blockquote {
+	margin-bottom: 2vh;
+}
+
 .About-img {
 	margin: 0 3vw 0 0;
 	max-height: 270px;
@@ -168,7 +188,7 @@ button {
 	border-bottom: 3px solid black;
 }
 
-/* Articles.js */
+/* Article.js */
 .Article-h2 {
 	font-size: larger;
 	font-family: 'Pixelated MS Sans Serif', Arial;
@@ -177,6 +197,14 @@ button {
 .Article-title {
 	display: flex;
 	align-items: center;
+}
+
+.Article-code {
+	margin-left: 12px;
+}
+
+.Article-icon {
+	margin: 0 1px 3px 0;
 }
 
 /* Block.js */

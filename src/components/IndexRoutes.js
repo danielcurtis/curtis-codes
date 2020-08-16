@@ -1,21 +1,27 @@
 import React, { useState } from 'react';
 import Draggable from 'react-draggable';
 import '98.css';
+
 import './index.css';
 import About from './About';
 import Articles from './Articles';
 import Projects from './Projects';
-import Minesweeper from '../minesweeper/index.js';
-import Icons from './children/Icons';
+import Icons from './Icons';
+import Minesweeper from './minesweeper/Minesweeper';
 
 function IndexRoutes() {
 	const [active, setActive] = useState('About Me');
-	let component;
 
-	if (active === 'About Me') component = <About />;
-	else if (active === 'Articles') component = <Articles />;
-	else if (active === 'Projects') component = <Projects />;
-	else if (active === 'Minesweeper') component = <Minesweeper />;
+	let component;
+	if (active === 'About Me') {
+		component = <About />;
+	} else if (active === 'Articles') {
+		component = <Articles />;
+	} else if (active === 'Projects') {
+		component = <Projects />;
+	} else if (active === 'Minesweeper') {
+		component = <Minesweeper />;
+	}
 
 	return (
 		<div>
