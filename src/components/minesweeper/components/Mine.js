@@ -31,6 +31,7 @@ function Mine({ mine }) {
 			}
 		}
 	`);
+
 	const { state, dispatch } = useContext(GameContext);
 
 	const showBomb = () =>
@@ -38,7 +39,7 @@ function Mine({ mine }) {
 
 	const showFlag = () => (!state.gameover || !state.win) && mine.flagged;
 
-	const showNeighbors = () => (state.gameover || mine.shown) && mine.neighbors;
+	const showNeighbor = () => (state.gameover || mine.shown) && mine.neighbors;
 
 	const win = () => {
 		return (
@@ -115,7 +116,7 @@ function Mine({ mine }) {
 					alt="flag"
 					fluid={images.flag.childImageSharp.fluid}
 				/>
-			) : showNeighbors() ? (
+			) : showNeighbor() ? (
 				`${mine.neighbors}`
 			) : (
 				''
