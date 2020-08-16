@@ -1,6 +1,6 @@
 # Curtis Codes dot com
 
-My personal portfolio designed after Windows 98 built using Gatsby.
+My personal portfolio designed after Windows 98 built using React.
 
 ## Prerequisites
 
@@ -9,18 +9,24 @@ My personal portfolio designed after Windows 98 built using Gatsby.
   
 ## Local Development
 
-1. Clone the repo `git clone https://github.com/danielcurtis/curtis-codes.git`
-2. Create a new development branch `get checkout -b dev`
-3. Run `npm install`
-4. Start the dev server `gastby develop`
-5. Build the website `gatsby build`
-6. Create a pull request to merge into dev
+Create a local project:
+
+```bash
+gatsby new your-project https://github.com/danielcurtis/curtis-codes
+```
+
+Switch directories, and start coding:
+
+```bash
+cd your-project
+gatsby develop
+```
 
 ## Author & Acknowledgements
 
 #### Author
 
-- Dan Curtis - [@codescurtis](https://twitter.com/codescurtis) [CurtisCodes.com](https://curtiscodes.com)
+- Yours truly [@codescurtis](https://twitter.com/codescurtis) [CurtisCodes.com](https://curtiscodes.com)
 
 #### Acknowledgements
 
@@ -28,5 +34,7 @@ My personal portfolio designed after Windows 98 built using Gatsby.
 - [Windows 98 Icons](https://win98icons.alexmeub.com/)
 
 ## License
+
+I'm open sourcing this site to give others some inspiration, but please don't just clone it and change the name :)
 
 [MIT](https://github.com/danielcurtis/curtis-codes/main/LICENSE)
