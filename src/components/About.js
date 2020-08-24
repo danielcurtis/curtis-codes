@@ -36,7 +36,7 @@ function About() {
 					<p>
 						I'm an enthusiastic software engineer with 2+ years of hands-on
 						experience with C and JavaScript/Node/React interested in machine
-						learning. Full-stack specialist.
+						learning.
 					</p>
 					<div className="flex">
 						<a href="mailto:contactdcurtis@gmail.com" className="no-decor">

@@ -48,8 +48,8 @@ function Projects() {
 			))}
 
 			<p>
-				My portfolio project was built using Gatsby. I also used two retro UI
-				resources: <a href="https://jdan.github.io/98.css/">98.css</a> and{' '}
+				This portfolio is built with React,{' '}
+				<a href="https://jdan.github.io/98.css/">98.css,</a> and{' '}
 				<a href="https://win98icons.alexmeub.com/">win98icons</a>.
 			</p>
 		</div>
