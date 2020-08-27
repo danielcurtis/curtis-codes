@@ -70,7 +70,7 @@ function Background() {
 						</summary>
 						<ul>
 							<details>
-								<summary>Software Engineer Intern @OhioOIT (2020)</summary>
+								<summary>Software Engineer Intern @OhioOIT</summary>
 								<ul>
 									<li>Migrated NodeJS apps to use Docker and Kubernetes</li>
 									<li>Converted Angular web apps to use Webpack and Docker</li>
@@ -81,7 +81,7 @@ function Background() {
 								</ul>
 							</details>
 							<details>
-								<summary>Frontend Developer Intern @OhioOIT (2019)</summary>
+								<summary>Frontend Developer Intern @OhioOIT</summary>
 								<ul>
 									<li>Technical Lead for upgrading outdated websites</li>
 									<li>
@@ -94,14 +94,13 @@ function Background() {
 								</ul>
 							</details>
 							<details>
-								<summary>Software Engineer Intern @CBS (2017)</summary>
+								<summary>Software Engineer Intern @CBS</summary>
 								<ul>
 									<li>
 										Placed with the advanced research engineering team working
 										in C and C++
 									</li>
 									<li>Improved software readability and resolved bugs</li>
-									<li>Presented with a full-time offer by the CTO</li>
 								</ul>
 							</details>
 						</ul>
