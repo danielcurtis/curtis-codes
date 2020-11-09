@@ -70,13 +70,7 @@ function About() {
 			<hr className="About-hr" />
 
 			<blockquote className="About-blockquote">
-				"...Daniel was the lead developer for our Student Affairs site
-				migrations and did wonderful interacting with customers and explaining
-				technical matters in an easy-to-understand fashion. He was kind and
-				patient when training new employees and kept a positive mindset with
-				even the most daunting tasks. During my time working with Daniel, I was
-				impressed with his drive, attention to detail, willingness to learn and
-				be a team player, and overall technical expertise..."
+				"I had the pleasure of working with Daniel as a part of our enterprise University website migration project for the past year at Ohio University. Daniel was one of our top-performing student web developers on the team and we could always count on him to go above and beyond for any task he was given. Daniel was the lead developer for our Student Affairs site migrations and did wonderful interacting with customers and explaining technical matters in an easy-to-understand fashion. He was kind and patient when training new employees and kept a positive mindset with even the most daunting tasks. As the migration came to an end, our organization knew that Daniel had much more potential beyond front end development and he was moved to the Software Engineering team to build upon his already wonderful skillset. During my time working with Daniel, I was impressed with his drive, attention to detail, willingness to learn and be a team player, and overall technical expertise. It is my honor to recommend Daniel for whatever future endeavors he pursues and I cannot wait to see him do great things"
 				<br />
 				<footer>— Breanna, Project Manager</footer>
 			</blockquote>
