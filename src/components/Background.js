@@ -70,7 +70,7 @@ function Background() {
 						</summary>
 						<ul>
 							<details>
-								<summary>Software Engineer Intern @OhioOIT</summary>
+								<summary>Software Engineer @OhioOIT</summary>
 								<ul>
 									<li>Migrated NodeJS apps to use Docker and Kubernetes</li>
 									<li>Converted Angular web apps to use Webpack and Docker</li>
@@ -81,7 +81,7 @@ function Background() {
 								</ul>
 							</details>
 							<details>
-								<summary>Frontend Developer Intern @OhioOIT</summary>
+								<summary>Frontend Developer @OhioOIT</summary>
 								<ul>
 									<li>Technical Lead for upgrading outdated websites</li>
 									<li>
@@ -94,7 +94,7 @@ function Background() {
 								</ul>
 							</details>
 							<details>
-								<summary>Software Engineer Intern @CBS</summary>
+								<summary>Software Engineer @CBS</summary>
 								<ul>
 									<li>
 										Placed with the advanced research engineering team working
