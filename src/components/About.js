@@ -23,6 +23,7 @@ function About() {
     }
   `);
 
+<<<<<<< HEAD
   return (
     <div className="win-space">
       <div className="About-top">
@@ -62,6 +63,47 @@ function About() {
           </div>
         </div>
       </div>
+=======
+	return (
+		<div className="win-space">
+			<div className="About-top">
+				<Img
+					className="About-img"
+					fixed={img.me.childImageSharp.fixed}
+					alt="Dan Curtis"
+				/>
+				<div className="About-top-txt">
+					<h1 className="About-h1">Hi there 👋</h1>
+					<p>
+						I'm an enthusiastic software engineer with 3+ years of hands-on
+						experience with C, Python, JavaScript/Node/Express/React interested 
+						in machine learning.
+					</p>
+					<div className="flex">
+						<a href="mailto:contactdcurtis@gmail.com" className="no-decor">
+							<button>
+								<FaRegEnvelope />
+							</button>
+						</a>
+						<a href="https://github.com/danielcurtis" className="no-decor">
+							<button>
+								<FaGithub />
+							</button>
+						</a>
+						<a href="https://linkedin.com/in/dancurtis" className="no-decor">
+							<button>
+								<FaLinkedinIn />
+							</button>
+						</a>
+						<a href="https://twitter.com/codescurtis" className="no-decor">
+							<button>
+								<FaTwitter />
+							</button>
+						</a>
+					</div>
+				</div>
+			</div>
+>>>>>>> 6f3fa018ddbdaba6a2495fc09c2aac26bc981926
 
       <hr />
 
