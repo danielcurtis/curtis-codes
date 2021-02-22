@@ -1,0 +1,18 @@
+.index {
+  padding: 1px 16px;
+  background: #fff;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf,
+    inset 2px 2px #0a0a0a;
+}
+
+.flex {
+  display: flex;
+}
+
+.img {
+  flex: 0 0 150px;
+}
+
+.p {
+  line-height: 1.5;
+}

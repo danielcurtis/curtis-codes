@@ -11,9 +11,13 @@ type Props = {
 function Window({ title, setShowWindow, children }: Props) {
   const [isMinimized, setIsMinimized] = useState(true);
 
+  // <Draggable handle=".title-bar" />
   return (
-    <Draggable handle=".title-bar">
-      <div className={`window ${isMinimized ? styles.sm : styles.lg}`}>
+    <Draggable>
+      <div
+        className={`window ${isMinimized ? styles.sm : styles.lg} ${
+          styles.window
+        }`}>
         <div className="title-bar">
           <div className="title-bar-text">{title}</div>
           <div className="title-bar-controls">
@@ -28,7 +32,7 @@ function Window({ title, setShowWindow, children }: Props) {
           </div>
         </div>
 
-        <div className="window-body">
+        <div className={`${styles.body}`}>
           <div>{children}</div>
         </div>
       </div>

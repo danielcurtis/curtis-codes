@@ -1,7 +1,35 @@
 .sm {
-  max-width: 680px;
+  --max-h: 70vh;
+  max-width: 800px;
+  max-height: var(--max-h);
+  top: 15vh;
 }
 
 .lg {
+  --h: 100vh;
   max-width: 100vw;
+  height: var(--h);
+  top: 0vh;
+}
+
+.window {
+  z-index: 1;
+  left: 0;
+  right: 0;
+  position: absolute;
+  margin: auto;
+}
+
+.sm > .body {
+  max-height: calc(var(--max-h) - 50px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 10px;
+}
+
+.lg > .body {
+  height: calc(var(--h) - 45px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 10px;
 }
