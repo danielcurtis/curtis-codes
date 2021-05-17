@@ -1,0 +1,11 @@
+.clicked {
+  color: blue;
+}
+
+.flagged {
+  color: orange;
+}
+
+.row {
+  display: flex;
+}

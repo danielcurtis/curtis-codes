@@ -1,0 +1,12 @@
+.h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  width: 22px;
+  height: 22px;
+  margin-left: 4px;
+}
