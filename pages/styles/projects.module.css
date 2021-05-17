@@ -1,0 +1,22 @@
+.tile {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin-bottom: 60px;
+}
+
+.btn {
+  font-size: 50px;
+  padding-top: 10px;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-size: 24px;
+}
+
+.box {
+  text-align: center;
+}

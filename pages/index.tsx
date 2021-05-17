@@ -15,14 +15,19 @@ function IndexPage() {
             quality={100}
           />
         </div>
-        <h2>Software Engineer in Denver</h2>
+        <div>
+          <h2 className={styles.heading}>Dan Curtis</h2>
+          <strong>
+            <p className={styles.heading}>Software Engineer in Denver</p>
+          </strong>
+        </div>
       </div>
       <div className={styles.index}>
         <p className={styles.p}>
-          Hi friends! My name is Dan and I work at CVS Health. I balance my free
-          time between building fun ideas, teaching others code, and the great
-          outdoors. Speaking of fun ideas&#8212;ask Clippy if you have more
-          questions about me!
+          Welcome to my corner of the Internet. I spend my days coding at CVS
+          Health, nights tinkering with side projects, and weekends as far away
+          from a computer as possible. For more information about me, chat with
+          Clippy!
         </p>
       </div>
     </Layout>

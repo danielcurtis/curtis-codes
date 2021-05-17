@@ -7,10 +7,15 @@
 
 .flex {
   display: flex;
+  align-items: center;
 }
 
 .img {
   flex: 0 0 150px;
+}
+
+.heading {
+  margin: 2px 10px;
 }
 
 .p {

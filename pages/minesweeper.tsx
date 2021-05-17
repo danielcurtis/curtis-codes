@@ -1,9 +1,11 @@
 import Layout from '../components/Layout';
+import Minesweeper from '../components/Minesweeper';
 
 function MinesweeperPage() {
   return (
     <Layout title="Minesweeper">
-      <h1>Minesweeper</h1>
+      <h2>Minesweeper</h2>
+      <Minesweeper />
     </Layout>
   );
 }

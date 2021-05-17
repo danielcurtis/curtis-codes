@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Article from '../components/Article';
 import Layout from '../components/Layout';
+import styles from './styles/articles.module.css';
 
 type Props = {
   articles: any;
@@ -25,14 +26,18 @@ function ArticlesPage({ articles }: Props) {
 
   return (
     <Layout title="Articles">
-      <h2>Tutorials, code snippets, and chaos.</h2>
-      <label>
+      <label className={styles.label}>
         Sort By:&nbsp;
-        <select onChange={(e) => setSortBy(e.target.value)}>
+        <select
+          onChange={(e) => setSortBy(e.target.value)}
+          className={styles.select}>
           <option value="date">Date</option>
           <option value="likes">Popularity</option>
         </select>
       </label>
+
+      <br />
+      <hr />
 
       {sorted.map((a: any) => (
         <Article
